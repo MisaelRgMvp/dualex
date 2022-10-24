@@ -19,6 +19,11 @@ import {
   import { SketchOutlined , SmileOutlined, SafetyCertificateOutlined, WomanOutlined, UserOutlined, LockOutlined, InfoCircleOutlined, IdcardOutlined  } from "@ant-design/icons";
 import Password from 'antd/lib/input/Password';
 import Item from 'antd/lib/list/Item';
+import mvp from '../images/mvp.png'
+
+
+
+
 
 function Register() {
     const fromSuccess=(datos) => {
@@ -38,10 +43,10 @@ function Register() {
 
 
     <div className='containerPrincipalR'>
-
+ <img className='logoRegister' src={mvp}></img>
          <div  className='containerSecundarioR'>   
 
-
+                
          <Form    onFinish={fromSuccess}
           onFinishFailed={fromFailed}   >
 
@@ -55,7 +60,7 @@ function Register() {
                   message: "Ingrese Una Password",
                 },
               ]}>
-            <Input  className='inputAntR' placeholder='Apellido Paterno' suffix={<UserOutlined/>}/>
+            <Input maxLength={15} className='inputAntR' placeholder='Apellido Paterno' suffix={<UserOutlined/>}/>
         </Item>
 
         
@@ -65,7 +70,7 @@ function Register() {
                   message: "Ingrese Una Password",
                 },
               ]}>
-            <Input  className='inputAntR' placeholder='Nombre de Usuario'suffix={<UserOutlined/>}/>
+            <Input maxLength={15} className='inputAntR' placeholder='Nombre de Usuario'suffix={<UserOutlined/>}/>
         </Item>
 
         
@@ -75,7 +80,7 @@ function Register() {
                   message: "Ingrese Una Password",
                 },
               ]}>
-            < Password  className='inputAntR' placeholder='Password'  />
+            < Password maxLength={15} className='inputAntR' placeholder='Password'  />
         </Item>
 
         
@@ -85,13 +90,13 @@ function Register() {
                   message: "Ingrese Una Password",
                 },
               ]}>
-            <Input suffix={<IdcardOutlined />} className='inputAntR' placeholder='Ingrese su Correo' />
+            <Input maxLength={15} suffix={<IdcardOutlined />} className='inputAntR' placeholder='Ingrese su Correo' />
         </Item>
 
         
        
 
-        <Button className='buttonAntR' type='primary' size='large' htmlType='submit' > Registrar Usuario </Button>
+        <Button  className='buttonAntR' type='primary' size='large' htmlType='submit' > Registrar Usuario </Button>
 
 </Form>
 
