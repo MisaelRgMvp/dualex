@@ -18,7 +18,7 @@ import {
   } from "antd";
   import { SketchOutlined , SmileOutlined, SafetyCertificateOutlined, WomanOutlined, UserOutlined, LockOutlined, InfoCircleOutlined } from "@ant-design/icons";
 
-function register() {
+function Register() {
   return (
 
 
@@ -52,4 +52,4 @@ function register() {
   )
 }
 
-export default register
+export default Register;
