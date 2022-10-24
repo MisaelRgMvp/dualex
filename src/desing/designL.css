@@ -50,5 +50,6 @@ Input::placeholder{
     border-radius: 0.6rem;
 }
 img{
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
+    max-width: 12.0rem;
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import mvp from '../images/mvp.png';
+import mvp from '../images/mvp2.png';
 import '../desing/designL.css'
 import { Button, Input } from 'antd'
 export default function Login() {
