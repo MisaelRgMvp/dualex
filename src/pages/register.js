@@ -16,6 +16,8 @@ import {
     Radio,
     Modal
   } from "antd";
+  import { SketchOutlined , SmileOutlined, SafetyCertificateOutlined, WomanOutlined, UserOutlined, LockOutlined, InfoCircleOutlined } from "@ant-design/icons";
+
 function register() {
   return (
 
@@ -29,7 +31,7 @@ function register() {
          <Form       >
 
 
-        <Input placeholder='Nombre' />
+        <Input  placeholder='Nombre' />
 
         <Input placeholder='Apellido Paterno'/>
 
@@ -38,6 +40,8 @@ function register() {
         <Input placeholder='Password' />
 
         <Input placeholder='Ingrese su Correo' />
+
+        <Button type='primary' > Registrar Usuario </Button>
 
 </Form>
 
