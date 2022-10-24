@@ -11,6 +11,7 @@ export default function Login() {
       <img src={mvp}></img>
             <form>
                 <Input 
+                
                 //style={{width:'290px', height:'35px', borderRadius:'12px', backgroundColor: 'rgba(0,0,0,0)'}}
                 className='input' 
                 placeholder='USUARIO'/><br></br>

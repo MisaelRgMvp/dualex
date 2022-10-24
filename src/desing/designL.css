@@ -23,7 +23,7 @@
 
 }
 .Button{
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.5) !important;
     border-radius: 0.6rem;
     text-align: center;
     position: relative;
@@ -31,9 +31,17 @@
     max-width: 100%;
     width: fit-content;
     margin-bottom: 1rem;
+    box-shadow:  1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.Button:hover{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+}
+.Button:active{
+    color: white;   
 }
 .input input{
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0) !important;
     color: blanchedalmond;
     font-family:  Roboto;
 }
@@ -41,7 +49,7 @@ Input::placeholder{
     font-family:  Roboto;
 }
 .input{
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.3) !important;
     border-color: white;
     width: 15.5rem;
     margin: 1rem;
