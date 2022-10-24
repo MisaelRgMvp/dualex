@@ -4,11 +4,17 @@ import { Input } from 'antd'
 export default function Login() {
   return (
     <div>
-      <grid>
+      <grid classname='containerPrincipalL'>
         <h1>HOLA</h1>
             <form>
-                <Input placeholder='USUARIO'/>
-                <Input.Password placeholder='CONTRASE&Ntilde;A'/>
+                <Input 
+                //style={{width:'290px', height:'35px', borderRadius:'12px', backgroundColor: 'rgba(0,0,0,0)'}}
+                className='input' 
+                placeholder='USUARIO'/>
+                <Input.Password 
+                className='input' 
+                //style={{width:'290px', height:'35px', borderRadius:'12px', backgroundColor: 'rgba(0,0,0,0)'}}
+                placeholder='CONTRASE&Ntilde;A'/>
             </form>
       </grid>
     </div>

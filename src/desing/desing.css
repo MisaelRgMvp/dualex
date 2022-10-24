@@ -1,7 +1,16 @@
 @import '~antd/dist/antd.css';
-Input{
+.input{
     background-color: rgba(0, 0, 0, 0);
     border-color: white;
+    width: 15.5rem;
+
+}
+.input input{
+    background-color: rgba(0, 0, 0, 0);
+  
+}
+Input::placeholder{
+    font-family: 'Courier New', Courier, monospace;
 }
 body{
     background-color: rgb(153, 120, 230);
@@ -33,6 +42,27 @@ body{
 
 }
 
+.containerPrincipalL
+{
+    border-radius: 15px;
+    position: absolute;
+    
+    left: 50%;
+    top: 50%;
+    
+    transform: translate(-50%, -50%);
+    border: 0.5px solid rgb(15, 15, 15);
+    /*padding-left: 150px;*/
+    padding: 40px 40px 10px 40px;
+    
+    /**padding-right: 150px;*/
+    
+    background-color: rgb(0, 18, 24);
+    box-shadow: 8px 5px 10px 5px rgba(0, 0, 0, 0.6)
+    
+
+
+}
 
 .containerSecundarioR {
 
