@@ -54,14 +54,18 @@ function Register() {
      <Input className='inputAntR' placeholder='Nombre' suffix={<UserOutlined/>} />
  </Item>
        
-        <Item rules={[
+        <Item 
+        rules={[
                 {
                   required: true,
-                  message: "Ingrese Una Password",
+                  message: "Ingrese Una Apellido",
                 },
               ]}>
-            <Input maxLength={15} className='inputAntR' placeholder='Apellido Paterno' suffix={<UserOutlined/>}/>
+            <Input maxLength={15} className='inputAntR' placeholder='Apellido' suffix={<UserOutlined/>}/>
         </Item>
+
+        
+      
 
         
         <Item rules={[
@@ -70,27 +74,17 @@ function Register() {
                   message: "Ingrese Una Password",
                 },
               ]}>
-            <Input maxLength={15} className='inputAntR' placeholder='Nombre de Usuario'suffix={<UserOutlined/>}/>
+            < Password minLength={8} maxLength={15} className='inputAntR' placeholder='Password'  />
         </Item>
 
         
         <Item rules={[
                 {
                   required: true,
-                  message: "Ingrese Una Password",
+                  message: "Ingrese Un Correo",
                 },
               ]}>
-            < Password maxLength={15} className='inputAntR' placeholder='Password'  />
-        </Item>
-
-        
-        <Item rules={[
-                {
-                  required: true,
-                  message: "Ingrese Una Password",
-                },
-              ]}>
-            <Input maxLength={15} suffix={<IdcardOutlined />} className='inputAntR' placeholder='Ingrese su Correo' />
+            <Input  suffix={<IdcardOutlined />} className='inputAntR' placeholder='Ingrese su Correo' />
         </Item>
 
         
