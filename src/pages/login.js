@@ -1,5 +1,5 @@
 import React from 'react'
-import '../desing/desing.css'
+import '../desing/designL.css'
 import { Button, Input } from 'antd'
 export default function Login() {
   return (
