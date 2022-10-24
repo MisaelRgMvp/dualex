@@ -17,6 +17,7 @@ import {
     Modal
   } from "antd";
   import { SketchOutlined , SmileOutlined, SafetyCertificateOutlined, WomanOutlined, UserOutlined, LockOutlined, InfoCircleOutlined } from "@ant-design/icons";
+import Password from 'antd/lib/input/Password';
 
 function Register() {
   return (
@@ -31,15 +32,15 @@ function Register() {
          <Form       >
 
 
-        <Input  placeholder='Nombre' />
+        <Input className='inputAntR' placeholder='Nombre' />
 
-        <Input placeholder='Apellido Paterno'/>
+        <Input  className='inputAntR' placeholder='Apellido Paterno'/>
 
-        <Input placeholder='Nombre de Usuario'/>
+        <Input  className='inputAntR' placeholder='Nombre de Usuario'/>
 
-        <Input placeholder='Password' />
+        < Password  className='inputAntR' placeholder='Password' />
 
-        <Input placeholder='Ingrese su Correo' />
+        <Input  className='inputAntR' placeholder='Ingrese su Correo' />
 
         <Button type='primary' > Registrar Usuario </Button>
 
