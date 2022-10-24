@@ -18,7 +18,7 @@ Input::placeholder{
 }
 body{
     background-color: rgb(153, 120, 230);
-    background-image: URL('../images/66159.png');
+    background-image: URL('../images/66159.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -39,8 +39,8 @@ body{
     
     /**padding-right: 150px;*/
     border-color: rgba(28, 28, 28, 0.2);
-    background-color: rgba(0, 18, 24, 0.2);
-    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.4);
     margin: 5px;
     height: 500px;
     width: 400px;
@@ -77,6 +77,7 @@ body{
 .containerSecundarioR {
  text-align: center;
  margin-top: 70px;
+ margin-bottom: 30px;
 }
 .inputAntR{
 
@@ -92,15 +93,20 @@ margin-left: 20px;
 
 .inputAntR input {
 
-    background-color: rgba(1, 1, 1, 0.2);
-    color: white;
-    width: 300px;
+    background-color: rgba(4, 4, 4, 0.2) !important;
+
+border-radius: 4px;
+color: white;
+width: 300px;
+
+   
    
 }
 .buttonAntR {
 
     background-color: rgba(6, 6, 6, .30);
     margin-top: 25px;
+    margin-bottom: 10px;
 }
 .Button{
     background-color: rgba(0, 0, 0, 0.2);
