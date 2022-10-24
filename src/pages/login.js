@@ -5,6 +5,7 @@ export default function login() {
   return (
     <div>
       <grid>
+        <h1>HOLA</h1>
             <form>
                 <Input placeholder='USUARIO'/>
                 <Input.Password placeholder='CONTRASE&Ntilde;A'/>
