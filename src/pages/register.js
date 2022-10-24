@@ -16,10 +16,23 @@ import {
     Radio,
     Modal
   } from "antd";
-  import { SketchOutlined , SmileOutlined, SafetyCertificateOutlined, WomanOutlined, UserOutlined, LockOutlined, InfoCircleOutlined } from "@ant-design/icons";
+  import { SketchOutlined , SmileOutlined, SafetyCertificateOutlined, WomanOutlined, UserOutlined, LockOutlined, InfoCircleOutlined, IdcardOutlined  } from "@ant-design/icons";
 import Password from 'antd/lib/input/Password';
+import Item from 'antd/lib/list/Item';
 
 function Register() {
+    const fromSuccess=(datos) => {
+
+        alert("Fromulario enviado exitosamente", datos)
+        
+        }
+        
+        const fromFailed=(error) => {
+        
+          alert("Fromulario enviado sin Exito", error)
+          
+          }
+
   return (
 
 
@@ -29,20 +42,56 @@ function Register() {
          <div  className='containerSecundarioR'>   
 
 
-         <Form       >
+         <Form    onFinish={fromSuccess}
+          onFinishFailed={fromFailed}   >
 
+ <Item>
+     <Input className='inputAntR' placeholder='Nombre' suffix={<UserOutlined/>} />
+ </Item>
+       
+        <Item rules={[
+                {
+                  required: true,
+                  message: "Ingrese Una Password",
+                },
+              ]}>
+            <Input  className='inputAntR' placeholder='Apellido Paterno' suffix={<UserOutlined/>}/>
+        </Item>
 
-        <Input className='inputAntR' placeholder='Nombre' />
+        
+        <Item rules={[
+                {
+                  required: true,
+                  message: "Ingrese Una Password",
+                },
+              ]}>
+            <Input  className='inputAntR' placeholder='Nombre de Usuario'suffix={<UserOutlined/>}/>
+        </Item>
 
-        <Input  className='inputAntR' placeholder='Apellido Paterno'/>
+        
+        <Item rules={[
+                {
+                  required: true,
+                  message: "Ingrese Una Password",
+                },
+              ]}>
+            < Password  className='inputAntR' placeholder='Password'  />
+        </Item>
 
-        <Input  className='inputAntR' placeholder='Nombre de Usuario'/>
+        
+        <Item rules={[
+                {
+                  required: true,
+                  message: "Ingrese Una Password",
+                },
+              ]}>
+            <Input suffix={<IdcardOutlined />} className='inputAntR' placeholder='Ingrese su Correo' />
+        </Item>
 
-        < Password  className='inputAntR' placeholder='Password' />
+        
+       
 
-        <Input  className='inputAntR' placeholder='Ingrese su Correo' />
-
-        <Button type='primary' > Registrar Usuario </Button>
+        <Button className='buttonAntR' type='primary' size='large' htmlType='submit' > Registrar Usuario </Button>
 
 </Form>
 

@@ -35,14 +35,16 @@ body{
     transform: translate(-50%, -50%);
     border: 0.5px solid rgb(15, 15, 15);
     /*padding-left: 150px;*/
-    padding: 40px 40px 10px 40px;
+    padding: 30px 30px 10px 40px;
     
     /**padding-right: 150px;*/
-    border-color: rgb(28, 28, 28);
+    border-color: rgba(28, 28, 28, 0.2);
     background-color: rgba(0, 18, 24, 0.2);
-    box-shadow: 8px 5px 10px 5px rgba(0, 0, 0, 0.6);
-    max-width: 1920px;
-    max-height: 1080px;
+    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.6);
+    margin: 5px;
+    height: 500px;
+    width: 400px;
+  
     
 
 
@@ -73,20 +75,32 @@ body{
 }
 
 .containerSecundarioR {
-
-text-align: center;
+ text-align: center;
+ margin-top: 70px;
 }
 .inputAntR{
 
 background-color: rgba(4, 4, 4, 0.2) !important;
-margin-top: 5px;
-margin-bottom: 5px;
-
+margin-top: 1px;
+margin-bottom: 10px;
+border-radius: 4px;
+color: white;
+width: 300px;
+margin-left: 20px;
+margin-left: 20px;
 }
 
 .inputAntR input {
 
     background-color: rgba(1, 1, 1, 0.2);
+    color: white;
+    width: 300px;
+   
+}
+.buttonAntR {
+
+    background-color: rgba(6, 6, 6, .30);
+    margin-top: 25px;
 }
 .Button{
     background-color: rgba(0, 0, 0, 0.2);
