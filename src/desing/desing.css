@@ -1,0 +1,28 @@
+.containerPrincipalR
+{
+    border-radius: 15px;
+    position: absolute;
+    
+    left: 50%;
+    top: 50%;
+    
+    transform: translate(-50%, -50%);
+    border: 0.5px solid rgb(223, 224, 224);
+    /*padding-left: 150px;*/
+    padding: 40px 40px 10px 40px;
+    
+    /**padding-right: 150px;*/
+    
+    background-color: rgb(250, 253, 254);
+    box-shadow: 8px 5px 10px 5px rgba(0, 0, 0, 0.6)
+    
+
+
+}
+
+
+.containerSecundarioR {
+
+text-align: center;
+
+}
