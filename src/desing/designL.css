@@ -27,6 +27,7 @@
     border-radius: 0.6rem;
     text-align: center;
     position: relative;
+    color: white;
     max-width: 100%;
     width: fit-content;
     margin-bottom: 1rem;
@@ -47,4 +48,7 @@ Input::placeholder{
     color: blanchedalmond;
     font-family:  Arial;
     border-radius: 0.6rem;
+}
+img{
+    margin-bottom: 1.5rem;
 }

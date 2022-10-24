@@ -4,6 +4,7 @@ Input::placeholder{
     font-family:  Roboto;
 }
 body{
+    color: white;
     background-color: rgb(153, 120, 230);
     background-image: URL('../images/66159.jpg');
     background-repeat: no-repeat;

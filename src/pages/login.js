@@ -1,12 +1,14 @@
 import React from 'react'
+import mvp from '../images/mvp.png';
 import '../desing/designL.css'
 import { Button, Input } from 'antd'
 export default function Login() {
   return (
     <div>
       <grid className='containerPrincipalL'>
+  
       <grid className='containerSecundarioL'>
-        <h1>HOLA</h1>
+      <img src={mvp}></img>
             <form>
                 <Input 
                 //style={{width:'290px', height:'35px', borderRadius:'12px', backgroundColor: 'rgba(0,0,0,0)'}}
