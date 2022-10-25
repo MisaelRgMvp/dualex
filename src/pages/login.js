@@ -7,22 +7,21 @@ export default function Login() {
     <div>
       <grid className='containerPrincipalL'>
   
-      <grid className='containerSecundarioL'>
-      <img src={mvp}></img>
-            <form>
-                <Input 
-                
-                //style={{width:'290px', height:'35px', borderRadius:'12px', backgroundColor: 'rgba(0,0,0,0)'}}
+        <grid className='containerSecundarioL'>
+          <img src={mvp}></img>
+          <form>
+                <Input
                 className='input' 
                 placeholder='USUARIO'/><br></br>
+
                 <Input.Password 
                 className='input' 
-                //style={{width:'290px', height:'35px', borderRadius:'12px', backgroundColor: 'rgba(0,0,0,0)'}}
                 placeholder='CONTRASE&Ntilde;A'/><br />
+
                 <Button className='Button'>INICIAR SESION</Button>
                 <br />
-            </form>
-      </grid>
+          </form>
+        </grid>
       </grid>
     </div>
   )

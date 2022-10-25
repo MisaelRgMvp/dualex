@@ -1,6 +1,5 @@
 @import '~antd/dist/antd.css';
-.containerPrincipalL
-{
+.containerPrincipalL{
     border-radius: 15px;
     position: absolute;
     text-align: center;
@@ -11,18 +10,12 @@
     padding: 50px;
     transform: translate(-50%, -50%);
     border: 0.5px solid rgb(15, 15, 15);
-    /*padding-left: 150px;*/
     padding: 40px 40px 10px 40px;
-    
-    /**padding-right: 150px;*/
     border: .5px solid rgba(255, 255, 255, 0.1);
     background-color: rgba(255, 255, 255, 0.06);
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
     max-width: 1920px;
     max-height: 1080px;
-    
-
-
 }
 .Button{
     background-color: rgba(0, 0, 0, 0.5) !important;
