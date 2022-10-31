@@ -66,3 +66,20 @@ body{
 Input{
     background-color: rgba(4, 4, 4, 1) !important;
 }
+
+.banner {
+
+    max-height: 10%;
+max-width: 100%;
+
+border-right-color: black;
+border-width: 3px;
+
+}
+.divCard {
+
+border-color: black;
+border-style: solid;
+text-align: center;
+
+}

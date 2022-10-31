@@ -17,9 +17,11 @@ export default function Login() {
                 <Input.Password 
                 className='input' 
                 placeholder='CONTRASE&Ntilde;A'/><br />
-
+                 <a href='/'>Olvdaste tu contrase&ntilde;a?</a>
+                <br />
                 <Button className='Button'>INICIAR SESION</Button>
                 <br />
+                <a href='/registro'>Crear cuenta</a>
           </form>
         </grid>
       </grid>
