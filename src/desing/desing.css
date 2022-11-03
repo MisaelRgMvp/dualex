@@ -4,10 +4,9 @@ Input::placeholder{
 }
 body{
     color: white;
-    background-color: rgb(153, 120, 230);
-    background-image: URL('../images/66159.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #f4f4f4;
+   
+    
     width: 100%;
     height: 100%;
 }
@@ -83,3 +82,14 @@ border-style: solid;
 text-align: center;
 
 }
+
+.cardAnt{
+
+    
+    background-color: rgb(255, 255, 255) !important;
+    text-align: center;
+     height: 337px;
+     width: 497px;
+   box-shadow:  0 0 5px rgba(0, 0, 0, 0.4);
+   border-radius: 4%;
+ }

@@ -1,15 +1,27 @@
 import React from 'react'
 import mvp from '../images/mvp2.png';
 import '../desing/designL.css'
-import { Button, Input } from 'antd'
+import { Button, Input, Col, Row } from 'antd'
 export default function Login() {
   return (
     <div>
-      <grid className='containerPrincipalL'>
-  
-        <grid className='containerSecundarioL'>
-          <img src={mvp}></img>
+<Row>
+     <Col>
+</Col>
+
+<Col xs='2' >
+
+
+      <div className='containerSecundarioL' >
+        <img  className='burger' src='https://yardis.com.mx/wp-content/uploads/2020/07/Hamburguesa-Cowboy.jpg'></img>
+        </div>
+        
+        
+        <grid className='containerPrincipalL'>
+          
           <form>
+
+
                 <Input
                 className='input' 
                 placeholder='USUARIO'/><br></br>
@@ -24,7 +36,9 @@ export default function Login() {
                 <a href='/registro'>Crear cuenta</a>
           </form>
         </grid>
-      </grid>
+        
+        </Col>
+        </Row>
     </div>
   )
 }

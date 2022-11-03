@@ -14,31 +14,27 @@ import {
     Checkbox,
     Grid,
     Radio,
-    Modal
+    Modal,
+    Card
   } from "antd";
-  import { SketchOutlined , SmileOutlined, SafetyCertificateOutlined, WomanOutlined, UserOutlined, LockOutlined, InfoCircleOutlined, IdcardOutlined  } from "@ant-design/icons";
+  import ConteinerCards from '../components/conteinerCards';
+  import { SketchOutlined , SmileOutlined, SafetyCertificateOutlined, WomanOutlined, UserOutlined, LockOutlined, InfoCircleOutlined, IdcardOutlined, ClockCircleOutlined, DollarOutlined  } from "@ant-design/icons";
 import Password from 'antd/lib/input/Password';
 import Item from 'antd/lib/list/Item';
 import mvp from '../images/mvp.png'
-
-
+import delivery from '../desing/delivery.svg'
+import CardsComida from '../components/cardsComida';
+const { Title, Text } = Typography;
 
 
 function Home() {
   return (
-    <div  className='homeContainer'  >
+  
+
+<div>
+<ConteinerCards></ConteinerCards>
 
 
- <div className='banner'>
-
-
- </div>
-
-<div className='components' ></div>
-
-
-<h1>hola</h1>
- 
 
 
     </div>
