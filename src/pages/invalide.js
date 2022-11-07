@@ -6,6 +6,6 @@ export default function Invalide() {
     return (
     <div>
         REDIRECT
-    </div>
+    </div> 
   )
 }

@@ -1,30 +1,51 @@
 import React from 'react'
 import mvp from '../images/mvp2.png';
+import burger from '../images/burger.jpg'
 import '../desing/designL.css'
-import { Button, Input, Col, Row } from 'antd'
+import {HomeFilled } from '@ant-design/icons';
+
+import { Button, Input, Image, Row, Col, Form} from 'antd'
 export default function Login() {
   return (
     <div>
-<Row>
-     <Col>
-</Col>
+      <Row className='Baneer' flex="auto" gutter={1}>
+      <Col>
+      
+        <Col className='home'>
+        <Button icon={<HomeFilled />}>REGRESAR</Button>
+        </Col>
+        <Col className='titleBanner'>DUALEX</Col>
 
-<Col xs='2' >
-
-
-      <div className='containerSecundarioL' >
-        <img  className='burger' src='https://yardis.com.mx/wp-content/uploads/2020/07/Hamburguesa-Cowboy.jpg'></img>
-        </div>
-        
-        
-        <grid className='containerPrincipalL'>
-          
-          <form>
+      
+    </Col>
+      </Row>
+    <Row >
+       
+      
+        <Col className='containerSecundarioL' span={
+          12
+        }>
+          <div className='pruebass' />
+        </Col>
+        <Col 
+        className='containerPrincipalL'
+        span={
+          12
+        }>
+         <div className='containerLogin' >
+          <h1 className='subtitle'>INICIAR SESION</h1>
+          <Form
+          wrapperCol={{
+            span: 16
+          }}
+          >
 
 
                 <Input
                 className='input' 
-                placeholder='USUARIO'/><br></br>
+                placeholder='USUARIO'
+                autoSize='true'
+                /><br></br>
 
                 <Input.Password 
                 className='input' 
@@ -34,11 +55,10 @@ export default function Login() {
                 <Button className='Button'>INICIAR SESION</Button>
                 <br />
                 <a href='/registro'>Crear cuenta</a>
-          </form>
-        </grid>
-        
+          </Form>
+        </div>
         </Col>
-        </Row>
-    </div>
+      </Row>
+      </div>
   )
 }
