@@ -81,7 +81,7 @@ export default function Register() {
           12
         }>
                       <div className='containerRegister' >
-   
+                      <h1 className='subtitle'>REGISTRO</h1>
          <Form >
 
    

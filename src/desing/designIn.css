@@ -1,13 +1,20 @@
 @import '~antd/dist/antd.css';
 @import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
-.containerPrincipalL{
+body{
+    background-color: #F4F4F4;
+}
+p{
+    font-family: lemon;
+}
+
+.containerPrincipalM{
     position: absolute;
     align-items: start;
     justify-items: center;
     right:2%;
     text-align: center;
-    width: 35vw;
+    width: 95vw;
     height: 100vh;
    /* padding-top: 6rem;
     padding-bottom: 6rem;
@@ -21,6 +28,27 @@
     z-index: 0;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
 } 
+.site-drawer-render-in-current-wrapper {
+    position: sticky !important;
+    height: 100vh;
+  
+    
+    right: 0 !important;
+    text-align: center;
+  color:black;
+    border: 1px solid #ebedf0;
+    border-radius: 2px;
+  }
+Drawer{
+   width:  90vw;
+   height: 90vh;
+   margin-top: 10vh !important;
+  }
+Col{
+    align-items: center;
+    left: 16;
+    position: absolute;
+}
 
 .Button{
     border-radius: 0.6rem;
@@ -34,7 +62,6 @@
     font-size: 1.9vh;
     box-shadow:  1px 1px 2px rgba(0, 0, 0, 0.5);
 }
-
 input input{
     background-color: rgba(255, 255, 255, 0) !important;
     color: black;
@@ -68,7 +95,7 @@ a:hover{
     cursor: pointer;
 }
 .bannerTop{
-    position: relative;
+    position: sticky;
     height: auto;
     overflow: hidden;
     
@@ -106,20 +133,32 @@ a:hover{
     top:0 !important;
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
-    width: 100vw !important;
+   
    height: 10vh !important;
    vertical-align: middle;
 
 }
+
 .home{
     display: flex;
-    position: flex;
-    width: max-content;
-    height: max-content;
-    vertical-align: middle;
-    top: 3vh;
+    position: absolute;
     
+    vertical-align: middle;
+    top: 0vh;
+    left: 1vw;
 
+}
+.buttonMenu{
+    width: 5vw;
+    height: 10vh;
+}
+.shopCar{
+    display: flex;
+    position: absolute;
+    
+    vertical-align: middle;
+
+    right: 1vw;
 }
 .containerRegister{
    position: flex;
@@ -145,7 +184,7 @@ top: 1vh;
 
 font-size: 5vmin;
 font-family: lemon;
-position: fixed;
+
 left: 40vw;
 right: 40vw;
 
