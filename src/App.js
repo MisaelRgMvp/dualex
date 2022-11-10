@@ -13,8 +13,8 @@ export default function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path='/login' element={<Singin />}/>
-          <Route path='/' element={<Login />}/>
+          <Route path='/logi' element={<Singin />}/>
+          <Route path='/login' element={<Login />}/>
           <Route path={REGISTER} element={<Register />}/>
           <Route path='*' element={<Invalide />}/>
           <Route  path={PRIVATE} element={<Home/>} />

@@ -1,6 +1,6 @@
-export const LOGIN = '/';
+export const LOGIN = '/login';
 export const PRIVATE = '/private';
 export const REGISTER = '/registro';
-export const MENU = '/menu';
+export const MENU = '/';
 
 

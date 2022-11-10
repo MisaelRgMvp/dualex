@@ -51,11 +51,14 @@ Input::placeholder{
     color: black;
     font-family:  Arial;
     border-radius: 10;
-    height: 4vh;
+   
 }
 img{
     margin-bottom: 0.5rem;
     max-width: 12.0rem;
+
+
+    
 }
 a{
     text-align: right;
