@@ -152,6 +152,15 @@ a:hover{
     width: 5vw;
     height: 10vh;
 }
+Avatar{
+    font-size: 1vmax;
+}
+.buttonMenuLogin{
+    text-align: center;
+    height: 10vh;
+    font-family: Arial black;
+    font-size: 1vmax;
+}
 .shopCar{
     display: flex;
     position: absolute;

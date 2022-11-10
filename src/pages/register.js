@@ -4,7 +4,7 @@ import burger from '../images/burger.jpg'
 import '../desing/designRe.css'
 import { useNavigate } from "react-router-dom";
 import {  HomeFilled, UserOutlined, LockFilled,PoweroffOutlined } from '@ant-design/icons';
-
+import { routeChangeHome, routeLogin } from '../components/navigate'; 
 import {
   Button,
   Space,
@@ -25,10 +25,9 @@ import {
 import { SketchOutlined , SmileOutlined, SafetyCertificateOutlined, WomanOutlined, LockOutlined, InfoCircleOutlined, IdcardOutlined  } from "@ant-design/icons";
 import Password from 'antd/lib/input/Password';
 import Item from 'antd/lib/list/Item';
-
+import { HomeButton } from '../components/navigate';
 import { Navigate } from 'react-router-dom';
-
-
+import { Navigates } from '../components/navigate';
 export default function Register() {
   const fromSuccess=(datos) => {
 
@@ -41,11 +40,7 @@ export default function Register() {
         alert("Fromulario enviado sin Exito", error)
         
         }
-        let navigate = useNavigate(); 
-        const routeChange = () =>{ 
-          let path = `/login`; 
-          navigate(path);
-        }
+       
         const [loadings, setLoadings] = useState([]);
         const enterLoading = (index) => {
           setLoadings((prevLoadings) => {
@@ -60,7 +55,7 @@ export default function Register() {
       <Col>
       
         <Col className='home'>
-        <Button size='large' className='buttonHome' type='text' onClick={routeChange} icon={<HomeFilled />} >REGRESAR</Button>
+        <Button size='large' className='buttonHome' type='text'  icon={<HomeFilled />} >REGRESAR</Button>
         </Col>
         <Col className='titleBanner'><p>DUALEX</p></Col>
 
@@ -124,8 +119,8 @@ export default function Register() {
        
 
         <Button   loading={loadings[2]} onClick={() => enterLoading(2)} className='Button' type='primary' size='large' htmlType='submit' > Registrar Usuario </Button>
-        <p>Ya tienes cuenta? 
-                <a href='/registro'>Iniciar Sesion</a></p>
+        <p>Ya tienes cuenta?         <Button type='text' onClick={Navigates}>Iniciar Sesion</Button>
+        </p>
 </Form>
 
 </div>

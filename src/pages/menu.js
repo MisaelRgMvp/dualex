@@ -1,5 +1,5 @@
 import React, { NavLink, useState } from 'react'
-
+import { useHistory } from "react-router-dom";
 import mvp from '../images/mvp2.png';
 import burger from '../images/burger.jpg'
 import '../desing/designIn.css'
@@ -22,7 +22,7 @@ import {
   Col,
   Radio,
   Modal,
-  
+  Avatar
 } from "antd";
 import { SketchOutlined , SmileOutlined, SafetyCertificateOutlined, WomanOutlined, LockOutlined, InfoCircleOutlined, IdcardOutlined, MenuOutlined  } from "@ant-design/icons";
 import Password from 'antd/lib/input/Password';
@@ -48,10 +48,30 @@ export default function Menu() {
         setOpenS(false);
       };
 
-     
+    const fontSize = { 
+      labelCol: {
+    
+    xs: {
+      span: 12,
+    },
+    sm: {
+      span: 8,
+    },
+    },
+    wrapperCol: {
+    
+    xs: {
+      span: 4,
+    },
+    sm: {
+      span: 20,
+    },
+    },
+    };
+   
         let navigate = useNavigate(); 
         const routeChange = () =>{ 
-          let path = `/menu`; 
+          let path = `/login`; 
           navigate(path);
         }
         const [loadings, setLoadings] = useState([]);
@@ -86,8 +106,19 @@ export default function Menu() {
         </Col>
         <Col  className='titleBanner'><p>DUALEX</p></Col>
        
-        <Col  className='shopCar'>  
+
+
+        <Col  className='shopCar'>
+
+        <Button onClick={routeChange} type='text' className='buttonMenuLogin' style={{background:'none'}} Link to icon={<Avatar size={ { xs: 14, sm: 18, md: 22, lg: 26, xl: 30, xxl: 34 }} style={{fontSize:'1vmax'}} icon={<UserOutlined  />} />} 
+        {...fontSize}
+        >
+         INICIAR SESION </Button>
+
+        
         <Button type="text" className='buttonMenu' onClick={showDrawerS}  >
+       
+
           <ShoppingCartOutlined style={{fontSize: '1.8vmax'}} className='iconMenu' />
         </Button>
      
