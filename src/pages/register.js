@@ -1,8 +1,8 @@
-import React, { NavLink, useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import mvp from '../images/mvp2.png';
 import burger from '../images/burger.jpg'
 import '../desing/designRe.css'
-import { useNavigate } from "react-router-dom";
+import {Link, Navigate } from "react-router-dom";
 import {  HomeFilled, UserOutlined, LockFilled,PoweroffOutlined } from '@ant-design/icons';
 import { routeChangeHome, routeLogin } from '../components/navigate'; 
 import {
@@ -11,6 +11,7 @@ import {
   Typography,
   Input,
   Select,
+  Spin,
   message,
   Row,
   Divider,
@@ -26,9 +27,15 @@ import { SketchOutlined , SmileOutlined, SafetyCertificateOutlined, WomanOutline
 import Password from 'antd/lib/input/Password';
 import Item from 'antd/lib/list/Item';
 import { HomeButton } from '../components/navigate';
-import { Navigate } from 'react-router-dom';
-import { Navigates } from '../components/navigate';
 export default function Register() {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+     // Wait for 3 seconds
+     setTimeout(() => {
+       setIsLoading(false);
+      
+     }, 3000);
+    }, []);
   const fromSuccess=(datos) => {
 
       alert("Fromulario enviado exitosamente", datos)
@@ -51,7 +58,8 @@ export default function Register() {
         }
   return (
     <div>
-      <Row className='Baneer' flex="auto" gutter={1}> 
+
+      <Row className='Baneer' gutter={1}> 
       <Col>
       
         <Col className='home'>
@@ -65,7 +73,7 @@ export default function Register() {
     <Row >
        
       
-        <Col className='containerSecundarioL' span={
+        <Col style={{position: 'fixed'}} className='containerSecundarioL' span={
           12
         }>
           <div className='pruebass' />
@@ -74,7 +82,7 @@ export default function Register() {
         className='containerPrincipalL'
         span={
           12
-        }>
+        }><Spin tip="Cargando..." spinning={isLoading}>
                       <div className='containerRegister' >
                       <h1 className='subtitle'>REGISTRO</h1>
          <Form >
@@ -119,13 +127,15 @@ export default function Register() {
        
 
         <Button   loading={loadings[2]} onClick={() => enterLoading(2)} className='Button' type='primary' size='large' htmlType='submit' > Registrar Usuario </Button>
-        <p>Ya tienes cuenta?         <Button type='text' onClick={Navigates}>Iniciar Sesion</Button>
+        <p>Ya tienes cuenta?         <Button><Link to='/login'>Iniciar Sesion</Link></Button>
         </p>
 </Form>
 
 </div>
+</Spin>
         </Col>
       </Row>
       </div>
+      
   )
 }

@@ -1,12 +1,11 @@
-import React, { NavLink, useState } from 'react'
+import React, { NavLink, useState, useEffect  } from 'react'
 import mvp from '../images/mvp2.png';
 import burger from '../images/burger.jpg'
 import '../desing/designL.css'
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { PoweroffOutlined } from '@ant-design/icons';
 import {HomeFilled, UserOutlined, LockFilled} from '@ant-design/icons';
-
-import { Button, Input, Image, Row, Col, Form} from 'antd'
+import { Button, Input, Image, Row, Col, Form, Spin } from 'antd'
 import { Navigate } from 'react-router-dom';
 
 const formItemLayout = { 
@@ -35,6 +34,14 @@ export default function Login() {
     let path = `/login`; 
     navigate(path);
   }
+const [isLoading, setIsLoading] = useState(true);
+useEffect(() => {
+   // Wait for 3 seconds
+   setTimeout(() => {
+     setIsLoading(false);
+    
+   }, 3000);
+  }, []);
   const [loadings, setLoadings] = useState([]);
   const enterLoading = (index) => {
     setLoadings((prevLoadings) => {
@@ -59,7 +66,7 @@ export default function Login() {
     <Row >
        
       
-        <Col className='containerSecundarioL' span={
+        <Col style={{position: 'fixed'}} className='containerSecundarioL' span={
           12
         }>
           <div className='pruebass' />
@@ -68,7 +75,7 @@ export default function Login() {
         className='containerPrincipalL'
         span={
           12
-        }>
+        }><Spin tip="Cargando..." spinning={isLoading}>
          <div className='containerLogin' >
           <h1 className='subtitle'>INICIAR SESION</h1>
           <Form
@@ -99,9 +106,9 @@ export default function Login() {
                 </Button>
                 <br />
                 <p>Aun no tienes una cuenta?</p>
-                <a href='/registro'>Crear cuenta</a>
+                <Link to='/registro'>Crear cuenta</Link>
           </Form>
-        </div>
+        </div></Spin>
         </Col>
       </Row>
       </div>
