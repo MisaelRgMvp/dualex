@@ -59,7 +59,7 @@ export default function Register() {
   return (
     <div>
 
-      <Row className='Baneer' gutter={1}> 
+      <Row className='Baneer' flex="auto" gutter={1}> 
       <Col>
       
         <Col className='home'>
@@ -73,10 +73,10 @@ export default function Register() {
     <Row >
        
       
-        <Col style={{position: 'fixed'}} className='containerSecundarioL' span={
+        <Col  className='containerSecundarioL' span={
           12
         }>
-          <div className='pruebass' />
+          <div  style={{position: 'fixed'}} className='pruebass' />
         </Col>
         <Col 
         className='containerPrincipalL'
