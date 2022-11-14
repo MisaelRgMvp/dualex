@@ -32,7 +32,7 @@ p{
     position: sticky !important;
     height: 100vh;
   
-    
+    overflow: scroll;
     right: 0 !important;
     text-align: center;
   color:black;

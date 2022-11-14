@@ -39,7 +39,8 @@ export default function Menu() {
       setOpen(true);
     };
     const showDrawerS = () => {
-        setOpenS(true);
+      setOpenS(true);
+      
       };
     const onClose = () => {
       setOpen(false);
@@ -85,7 +86,7 @@ export default function Menu() {
   return (
     <div>
         <center>
-      <Row className='Baneer' flex="auto" gutter={1}> 
+      <Row className='Baneer' gutter={10}> 
       
       
         <Col className='home'> 
@@ -130,7 +131,7 @@ export default function Menu() {
       
      <div className="site-drawer-render-in-current-wrapper">
      
-    <Row align='middle'>
+    <Row align='middle' gutter={[32, 108]}>
 
     <Col style={{background:'red'} } span={
           8}
@@ -143,10 +144,9 @@ export default function Menu() {
    <p>Hello</p>
       </Col>  
      
-     < Col style={{background:'blue'}} span={
-          8}
+     < Col style={{background:'blue', margin:'2'}} 
           xs={22} sm={40}  md={12} lg={8} xl={8}>  
-   <p>Hello</p>
+   <p>PATO</p>
       </Col>  
     <Drawer 
      xs={20} sm={20} md={12} lg={8} xl={8}
@@ -167,6 +167,74 @@ export default function Menu() {
     
 
     <Col style={{background:'red'} } span={
+          8}
+          
+          xs={20} sm={20} md={12} lg={8} xl={8}>  
+   <p>Hello</p>
+      </Col>  
+      <Col style={{background:'green'}} span={
+          8}
+          xs={20} sm={20}  md={12} lg={8} xl={8}> 
+   <p>Hello</p>
+      </Col>  
+     
+     < Col style={{background:'blue'}} span={
+          8}
+          xs={20} sm={20}  md={12} lg={8} xl={8}>  
+   <p>Hello</p>
+      </Col>  
+      <Col style={{background:'red'} } span={
+          8}
+          
+          xs={20} sm={20} md={12} lg={8} xl={8}>  
+   <p>Hello</p>
+      </Col>  
+      <Col style={{background:'green'}} span={
+          8}
+          xs={20} sm={20}  md={12} lg={8} xl={8}> 
+   <p>Hello</p>
+      </Col>  
+     
+     < Col style={{background:'blue'}} span={
+          8}
+          xs={20} sm={20}  md={12} lg={8} xl={8}>  
+   <p>Hello</p>
+      </Col>  
+      <Col style={{background:'red'} } span={
+          8}
+          
+          xs={20} sm={20} md={12} lg={8} xl={8}>  
+   <p>Hello</p>
+      </Col>  
+      <Col style={{background:'green'}} span={
+          8}
+          xs={20} sm={20}  md={12} lg={8} xl={8}> 
+   <p>Hello</p>
+      </Col>  
+     
+     < Col style={{background:'blue'}} span={
+          8}
+          xs={20} sm={20}  md={12} lg={8} xl={8}>  
+   <p>Hello</p>
+      </Col>  
+      <Col style={{background:'red'} } span={
+          8}
+          
+          xs={20} sm={20} md={12} lg={8} xl={8}>  
+   <p>Hello</p>
+      </Col>  
+      <Col style={{background:'green'}} span={
+          8}
+          xs={20} sm={20}  md={12} lg={8} xl={8}> 
+   <p>Hello</p>
+      </Col>  
+     
+     < Col style={{background:'blue'}} span={
+          8}
+          xs={20} sm={20}  md={12} lg={8} xl={8}>  
+   <p>Hello</p>
+      </Col>  
+      <Col style={{background:'red'} } span={
           8}
           
           xs={20} sm={20} md={12} lg={8} xl={8}>  

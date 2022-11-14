@@ -11,7 +11,7 @@ import ForgotP from './pages/forgotPassword';
 import Menu from './pages/menu';
 export default function App() {
   return (
-    <div style={{overflow: 'auto'}}>
+    <div >
       <BrowserRouter>
         <Routes>
           <Route path='/logi' element={<Singin />}/>
