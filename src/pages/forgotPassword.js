@@ -1,13 +1,13 @@
 import React, { NavLink, useState, useEffect  } from 'react'
-import mvp from '../images/mvp2.png';
+import mvp from '../images/closeMail.png';
 import burger from '../images/burger.jpg'
 import '../desing/designF.css'
 import { useNavigate, Link } from "react-router-dom";
 import { PoweroffOutlined } from '@ant-design/icons';
-import {HomeFilled, UserOutlined, LockFilled} from '@ant-design/icons';
-import { Button, Input, Image, Row, Col, Form, Spin } from 'antd'
+import {HomeFilled, UserOutlined, LockFilled, InfoCircleOutlined} from '@ant-design/icons';
+import { Button, Input, Image, Row, Col, Form, Spin, Avatar, Tooltip } from 'antd'
 import { Navigate } from 'react-router-dom';
-
+import open from '../images/closeMail.png'
 const formItemLayout = { 
   labelCol: {
 
@@ -72,7 +72,7 @@ useEffect(() => {
         span={12} 
         ><Spin tip="Cargando..." spinning={isLoading}>
          <div className='containerLogin' >
-          <h1 className='subtitle'>INICIAR SESION</h1>
+         <img src={open} className='img'></img>
           <Form
       
           
@@ -81,27 +81,27 @@ useEffect(() => {
 
                 <Input
                 className='input' 
-                placeholder='USUARIO'
+                placeholder='Ingrese su correo'
                 autoSize='true'
-                prefix={<UserOutlined className="site-form-item-icon icon" />}
-
+                prefix={<Avatar size={ { xs: 4, sm: 8, md: 12, lg: 16, xl: 20, xxl: 24 }} style={{fontSize:'0.7vmax'}} icon={<UserOutlined  />} />} 
+                suffix={
+                  <Tooltip title="CORREO PREVIAMENTE REGISTRADO">
+                    <Avatar size={ { xs: 4, sm: 8, md: 12, lg: 16, xl: 20, xxl: 24 }} style={{fontSize:'0.7vmax'}} icon={<InfoCircleOutlined style={{ color: 'white' }} />} />
+                  </Tooltip>
+                }
                 /><br></br>
 
-                <Input.Password 
-                className='input' 
-                prefix={<LockFilled className="site-form-item-icon icon"  />}
-                placeholder='CONTRASE&Ntilde;A'/><br />
-                 <a href='/'>Olvdaste tu contrase&ntilde;a?</a>
                 <br />
                 <Button 
                   loading={loadings[2]}
                   onClick={() => enterLoading(2)}
-                  type="primary" className='Button'>
-                    INICIAR SESION
-                </Button>
-                <br />
-                <p>Aun no tienes una cuenta?</p>
-                <Link to='/registro'>Crear cuenta</Link>
+                  type="primary"
+                  color='blue'
+                 className='Button'
+                  >
+                     RECUPERAR              </Button>
+             
+
           </Form>
         </div></Spin>
         </Col>

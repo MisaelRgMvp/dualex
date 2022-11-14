@@ -58,7 +58,8 @@ Col{
     position: relative;
     color: white;
     max-width: 100%;
-    width: 12vw;
+    width: 20vw;
+    min-width: 50px;
     height: auto;
     margin: 1.5rem;
     font-size: 1.9vh;
