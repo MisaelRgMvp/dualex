@@ -94,15 +94,16 @@ a:hover{
     background-size: cover;
     height: 100vh;
     display: flex ;
-    position: fixed;
     flex-direction: column;
     background-color: blue;
 }
 .Baneer{
     max-height: 300px; width: auto !important;
+    display: flex ;
     z-index: 10;
-    position: fixed;
-   
+    position: sticky;
+  
+    min-width: none;
     top:0 !important;
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);

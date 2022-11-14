@@ -66,10 +66,10 @@ useEffect(() => {
     <Row >
        
       
-        <Col style={{position: 'fixed'}} className='containerSecundarioL' span={
+        <Col className='containerSecundarioL' span={
           12
         }>
-          <div className='pruebass' />
+          <div  style={{position: 'fixed'}} className='pruebass' />
         </Col>
         <Col 
         className='containerPrincipalL'
@@ -77,7 +77,7 @@ useEffect(() => {
           12
         }><Spin tip="Cargando..." spinning={isLoading}>
          <div className='containerLogin' >
-          <h1 className='subtitle'>INICIAR SESION</h1>
+          <h1 className='subtitle'>SAMUEL NO SABE DE FRONTED</h1>
           <Form
       
           

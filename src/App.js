@@ -10,7 +10,7 @@ import Singin from './components/signin';
 import Menu from './pages/menu';
 export default function App() {
   return (
-    <div>
+    <div style={{overflow: 'auto'}}>
       <BrowserRouter>
         <Routes>
           <Route path='/logi' element={<Singin />}/>
