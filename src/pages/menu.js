@@ -94,7 +94,7 @@ export default function Menu() {
       <Drawer
         title={<p style={{textAlign:'center', display: 'block', fontSize:'1.9vmax'}} >DUALEX</p>}
         placement={'left'}
-        closeIcon={<CloseCircleFilled style={{right:'0.5vw', top:'0.5vh', position:'absolute'}} />}
+        closeIcon={<CloseCircleFilled style={{left:'0.5vw', top:'0.5vh', position:'absolute'}} />}
         onClose={onClose}
         open={open}
         

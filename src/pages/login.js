@@ -77,7 +77,7 @@ useEffect(() => {
           12
         }><Spin tip="Cargando..." spinning={isLoading}>
          <div className='containerLogin' >
-          <h1 className='subtitle'>SAMUEL NO SABE DE FRONTED</h1>
+          <h1 className='subtitle'>INICIAR SESION</h1>
           <Form
       
           
