@@ -1,4 +1,5 @@
 import React, { NavLink, useState } from 'react'
+import uno from '../images/baner/1.jpg';
 import CardsComida from '../components/cardsComida';
 import { useHistory } from "react-router-dom";
 import mvp from '../images/mvp2.png';
@@ -44,7 +45,31 @@ const suffix = (
     }}
   />
 );
-const contentStyle = {
+
+const contentStyleU = {
+  height: '160px',
+  color: '#fff',
+  lineHeight: '160px',
+  textAlign: 'center',
+  background: uno,
+};
+
+const contentStyleD = {
+  height: '160px',
+  color: '#fff',
+  lineHeight: '160px',
+  textAlign: 'center',
+  background: '#364d79',
+};
+
+const contentStyleT = {
+  height: '160px',
+  color: '#fff',
+  lineHeight: '160px',
+  textAlign: 'center',
+  background: '#364d79',
+};
+const contentStyleC = {
   height: '160px',
   color: '#fff',
   lineHeight: '160px',
@@ -162,16 +187,16 @@ const contentStyle = {
   <div  style={{marginBottom:'2vh'}}>
 <Carousel autoplay dots={false} >
     <div >
-      <h3 style={contentStyle}>1</h3>
+      <h3 style={contentStyleU}>1</h3>
     </div>
     <div>
-      <h3 style={contentStyle}>2</h3>
+      <h3 style={contentStyleD}>2</h3>
     </div>
     <div>
-      <h3 style={contentStyle}>3</h3>
+      <h3 style={contentStyleT}>3</h3>
     </div>
     <div>
-      <h3 style={contentStyle}>4</h3>
+      <h3 style={contentStyleC}>4</h3>
     </div>
   </Carousel></div>
     <Row align='middle'  gutter={[30, 28]}>
