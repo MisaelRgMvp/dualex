@@ -72,7 +72,7 @@ useEffect(() => {
         span={12} 
         ><Spin tip="Cargando..." spinning={isLoading}>
          <div className='containerLogin' >
-         <img src={open} className='img'></img>
+         <img preview={false} src={open} width='550vw' height='50vh' ></img>
           <Form
       
           
@@ -80,6 +80,7 @@ useEffect(() => {
 
 
                 <Input
+                xs={20} sm={20}  md={12} lg={8} xl={8}
                 className='input' 
                 placeholder='Ingrese su correo'
                 autoSize='true'
@@ -93,6 +94,7 @@ useEffect(() => {
 
                 <br />
                 <Button 
+                xs={8} sm={10}  md={12} lg={28} xl={38}
                   loading={loadings[2]}
                   onClick={() => enterLoading(2)}
                   type="primary"

@@ -96,7 +96,7 @@ useEffect(() => {
                 className='input' 
                 prefix={<LockFilled className="site-form-item-icon icon"  />}
                 placeholder='CONTRASE&Ntilde;A'/><br />
-                 <a href='/'>Olvdaste tu contrase&ntilde;a?</a>
+                 <a href='/forgot'>Olvdaste tu contrase&ntilde;a?</a>
                 <br />
                 <Button 
                   loading={loadings[2]}

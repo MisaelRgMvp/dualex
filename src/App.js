@@ -21,6 +21,7 @@ export default function App() {
           <Route  path={PRIVATE} element={<Home/>} />
           <Route path={MENU} element={<Menu/>} />
           <Route path='/forgot' element={<ForgotP/>} />
+          <Route path='/temas' element={<Theme />}/>
         </Routes>
       </BrowserRouter>
     </div>
