@@ -67,17 +67,18 @@ useEffect(() => {
        
       
         <Col className='containerSecundarioL' span={
-          12
-        }>
-          <div  style={{position: 'fixed'}} className='pruebass' />
+          25
+        } flex={1}
+        xs={0} sm={16} md={12} lg={8} xl={4}>          <div  style={{position: 'fixed'}} className='pruebass' />
         </Col>
         <Col 
         className='containerPrincipalL'
         span={
           12
-        }><Spin tip="Cargando..." spinning={isLoading}>
+        }xs={39} sm={4} md={6} lg={8} xl={10}><Spin tip="Cargando..." spinning={isLoading}>
          <div className='containerLogin' >
           <h1 className='subtitle'>INICIAR SESION</h1>
+          
           <Form
       
           

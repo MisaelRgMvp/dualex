@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+
 import {
     Button,
     Space,
@@ -17,11 +18,11 @@ import {
     Card
   } from "antd";
   import { SketchOutlined , SmileOutlined, SafetyCertificateOutlined, WomanOutlined, UserOutlined, LockOutlined, InfoCircleOutlined, IdcardOutlined, ClockCircleOutlined, DollarOutlined  } from "@ant-design/icons";
-import Password from 'antd/lib/input/Password';
+
 import Item from 'antd/lib/list/Item';
 import mvp from '../images/mvp.png'
 import delivery from '../desing/delivery.svg'
-
+import '../desing/desing.css'
 const { Title, Text } = Typography;
 
 
@@ -29,27 +30,33 @@ const { Title, Text } = Typography;
 
 
 
-function CardsComida() {
+function CardsComida({setModal2Open}) {
+  const [isLoading, setIsLoading] = useState(true);
+useEffect(() => {
+   // Wait for 3 seconds
+   setTimeout(() => {
+     setIsLoading(false);
+    
+   }, 8000);
+  }, []);
+  
   return (
     <div  className='homeContainer'  >
-    <img src={delivery}></img>
+   
     
-     <div className='banner'>
+   
     
-      <Text> Barra de inicio no importa por ahora</Text>
+    <div  >
     
-       <Divider/>
-     </div>
-    
-    <div className='components' >
-    
-     <Card size='small' className='cardAnt' >
+     <Card className='card' onClick={() => setModal2Open(true)} loading={isLoading} style={{borderRadius:'px', boxShadow:'0px 0px 5px 2px rgba(1, 1, 1, 0.6)'}}cover={<img alt="example" src={mvp} style={{align:'center'}} loading={isLoading}/>}
+  >
+
     <Title level={3} >Nombre de la comida</Title>
     
     <Text> Precio </Text>
     <ClockCircleOutlined />
       <Text>
-        15-20min 
+      <img width='3%' src={delivery}></img> 15-20min 
     
       </Text>
     

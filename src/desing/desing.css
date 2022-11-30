@@ -7,8 +7,7 @@ body{
     background-color: #f4f4f4;
    
     
-    width: 100%;
-    height: 100%;
+   
 }
     .containerPrincipalR{
     border-radius: 15px;
@@ -92,4 +91,57 @@ text-align: center;
      width: 497px;
    box-shadow:  0 0 5px rgba(0, 0, 0, 0.4);
    border-radius: 4%;
+   transition: height 4s;
+  
  }
+ .card:not(:hover){
+    
+    animation-duration: 1s;
+
+    animation-name: slideon;
+    
+ }
+.card:hover{
+    cursor: pointer;
+    animation-duration: 0.7s;
+    animation-name: slidein;
+    -webkit-transform:scale(1.06);
+    -moz-transform:scale(1.06);
+    -ms-transform:scale(1.06);
+    -o-transform:scale(1.06);
+    transform:scale(1.06);
+}
+@keyframes slideon {
+    0%{
+    -webkit-transform:scale(1.06);
+    -moz-transform:scale(1.06);
+    -ms-transform:scale(1.06);
+    -o-transform:scale(1.06);
+    transform:scale(1.06);
+}
+
+100%{
+    -webkit-transform:scale(1.0);
+    -moz-transform:scale(1.0);
+    -ms-transform:scale(1.0);
+    -o-transform:scale(1.0);
+    transform:scale(1.0);
+}
+}
+@keyframes slidein {
+    100%{
+    -webkit-transform:scale(1.06);
+    -moz-transform:scale(1.06);
+    -ms-transform:scale(1.06);
+    -o-transform:scale(1.06);
+    transform:scale(1.06);
+}
+
+0%{
+    -webkit-transform:scale(1.0);
+    -moz-transform:scale(1.0);
+    -ms-transform:scale(1.0);
+    -o-transform:scale(1.0);
+    transform:scale(1.0);
+}
+}
