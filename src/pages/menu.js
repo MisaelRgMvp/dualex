@@ -1,5 +1,8 @@
 import React, { NavLink, useState } from 'react'
+import dos from '../images/baner/2.gif';
 import uno from '../images/baner/1.jpg';
+import tres from '../images/baner/3.jpg';
+import cuatro from '../images/baner/4.jpg';
 import CardsComida from '../components/cardsComida';
 import { useHistory } from "react-router-dom";
 import mvp from '../images/mvp2.png';
@@ -26,7 +29,8 @@ import {
   Col,
   Radio,
   Modal,
-  Avatar
+  Avatar,
+  Image
 } from "antd";
 import { SketchOutlined ,AudioOutlined , SmileOutlined, SafetyCertificateOutlined, WomanOutlined, LockOutlined, InfoCircleOutlined, IdcardOutlined, MenuOutlined  } from "@ant-design/icons";
 import Password from 'antd/lib/input/Password';
@@ -45,36 +49,45 @@ const suffix = (
     }}
   />
 );
-
-const contentStyleU = {
-  height: '160px',
-  color: '#fff',
+const imageUno = {mvp};
+const contentStyleC = {
+  height: '45vh',
+    color: '#fff',
   lineHeight: '160px',
   textAlign: 'center',
-  background: uno,
+  backgroundImage: 'url("http://localhost:3000/static/media/4.98572e95114716f6a1b0.jpg")',
+  backgroundSize: '100% 100%',
+  backgroundRepeat: 'no-repeat'
+};
+
+const contentStyleU = {
+  height: '45vh',
+  color: '#fff',
+  lineHeight: '160px',
+  textAlign: 'center', 
+  backgroundImage: 'url("http://localhost:3000/static/media/1.4af7e858cb9772c2d2c7.jpg")',
+  backgroundSize: '100% 100%',
+  backgroundRepeat: 'no-repeat'
 };
 
 const contentStyleD = {
-  height: '160px',
+  height: '45vh',
   color: '#fff',
   lineHeight: '160px',
   textAlign: 'center',
-  background: '#364d79',
-};
 
-const contentStyleT = {
-  height: '160px',
-  color: '#fff',
-  lineHeight: '160px',
-  textAlign: 'center',
-  background: '#364d79',
+  backgroundImage: 'url("http://localhost:3000/static/media/2.311bec426add4f803e26.gif")',
+  backgroundSize: '100% 100%',
+  backgroundRepeat: 'no-repeat'
 };
-const contentStyleC = {
-  height: '160px',
-  color: '#fff',
+const contentStyleT = {
+  height: '45vh',
+    color: '#fff',
   lineHeight: '160px',
   textAlign: 'center',
-  background: '#364d79',
+  backgroundImage: 'url("http://localhost:3000/static/media/3.6a5092326c9f88abd1c2.jpg")',
+  backgroundSize: '100% 100%',
+  backgroundRepeat: 'no-repeat'
 };
   const onSearch = (value) => console.log(value);
   const [open, setOpen] = useState(false);
@@ -185,20 +198,23 @@ const contentStyleC = {
 </div>
 <div style={{padding:'2%', paddingBottom:'25vh'}}className="site-drawer-render-in-current-wrapper">
   <div  style={{marginBottom:'2vh'}}>
-<Carousel autoplay dots={false} >
-    <div >
-      <h3 style={contentStyleU}>1</h3>
+<Carousel autoplay dots={false} autoplaySpeed={5000} >
+
+    <div  >
+    <div style={contentStyleU} ></div>
     </div>
     <div>
-      <h3 style={contentStyleD}>2</h3>
+      <div style={contentStyleD}></div>
     </div>
     <div>
-      <h3 style={contentStyleT}>3</h3>
+      <div style={contentStyleT}></div>
     </div>
     <div>
-      <h3 style={contentStyleC}>4</h3>
+      <div style={contentStyleC} ></div>
     </div>
+   
   </Carousel></div>
+  
     <Row align='middle'  gutter={[30, 28]}>
     <Drawer 
      xs={20} sm={20} md={12} lg={8} xl={8}
@@ -265,13 +281,13 @@ const contentStyleC = {
       <Col  span={
           8}
           xs={20} sm={20}  md={12} lg={8} xl={8}> 
-   <CardsComida  />
+    <CardsComida  />
       </Col>  
       
 </Row>
 </div>
 </center>
-     
+  
 <Modal
          title="Nombre Comida"
          centered

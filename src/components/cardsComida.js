@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import uno from '../images/baner/1.jpg'
 import {
     Button,
     Space,
