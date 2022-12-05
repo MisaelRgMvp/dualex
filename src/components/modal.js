@@ -1,27 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import {
-    Button,
-    Space,
+
     Typography,
-    Input,
-    Select,
-    message,
-    Row,
-    
-    Divider,
-    Form,
-    Checkbox,
-    Grid,
-    Radio,
-    Modal,
     Card
   } from "antd";
-  import { SketchOutlined , SmileOutlined, SafetyCertificateOutlined, WomanOutlined, UserOutlined, LockOutlined, InfoCircleOutlined, IdcardOutlined, ClockCircleOutlined, DollarOutlined  } from "@ant-design/icons";
-
-import Item from 'antd/lib/list/Item';
-import mvp from '../images/mvp.png'
-import delivery from '../desing/delivery.svg'
+  import { DollarOutlined  } from "@ant-design/icons";
 import '../desing/desing.css'
 const { Title, Text } = Typography;
 export default function ModalComidaInfo() {

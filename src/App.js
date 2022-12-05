@@ -4,9 +4,6 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Register from './pages/register';
 import Invalide from './pages/invalide';
 import Login from './pages/login';
-import Theme from './pages/theme';
-import Home from './pages/home';
-import Singin from './components/signin';
 import ForgotP from './pages/forgotPassword';
 import Menu from './pages/menu';
 export default function App() {
@@ -14,14 +11,11 @@ export default function App() {
     <div >
       <BrowserRouter>
         <Routes>
-          <Route path='/logi' element={<Singin />}/>
           <Route path='/login' element={<Login />}/>
           <Route path={REGISTER} element={<Register />}/>
           <Route path='*' element={<Invalide />}/>
-          <Route  path={PRIVATE} element={<Home/>} />
           <Route path={MENU} element={<Menu/>} />
           <Route path='/forgot' element={<ForgotP/>} />
-          <Route path='/temas' element={<Theme />}/>
         </Routes>
       </BrowserRouter>
     </div>

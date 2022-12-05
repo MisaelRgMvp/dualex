@@ -1,55 +1,26 @@
-import React, { NavLink, useState } from 'react'
-import dos from '../images/baner/2.gif';
-import uno from '../images/baner/1.jpg';
-import tres from '../images/baner/3.jpg';
-import cuatro from '../images/baner/4.jpg';
+import React, { useState } from 'react'
 import CardsComida from '../components/cardsComida';
-import { useHistory } from "react-router-dom";
 import mvp from '../images/mvp2.png';
-import burger from '../images/burger.jpg'
 import ModalComidaInfo from '../components/modal';
 import '../desing/designIn.css'
 import { useNavigate } from "react-router-dom";
-import {  HomeFilled, UserOutlined, LockFilled,PoweroffOutlined, ShoppingCartOutlined,CloseCircleFilled } from '@ant-design/icons';
+import {  UserOutlined,ShoppingCartOutlined,CloseCircleFilled } from '@ant-design/icons';
 import DrawerMenu from '../components/menu'
 import {
   Button,
   Carousel,
-  Space,
-  Typography,
   Input,
-  Select,
-  message,
   Drawer,
   Row,
-  Divider,
-  Form,
-  Checkbox,
-  Grid,
   Col,
-  Radio,
   Modal,
   Avatar,
-  Image
 } from "antd";
-import { SketchOutlined ,AudioOutlined , SmileOutlined, SafetyCertificateOutlined, WomanOutlined, LockOutlined, InfoCircleOutlined, IdcardOutlined, MenuOutlined  } from "@ant-design/icons";
-import Password from 'antd/lib/input/Password';
-import Item from 'antd/lib/list/Item';
-
-import { Navigate } from 'react-router-dom';
-
+import {AudioOutlined, MenuOutlined  } from "@ant-design/icons";
 
 export default function Menu() {
   const { Search } = Input;
-const suffix = (
-  <AudioOutlined
-    style={{
-      fontSize: 16,
-      color: '#1890ff',
-    }}
-  />
-);
-const imageUno = {mvp};
+
 const contentStyleC = {
   height: '45vh',
     color: '#fff',
@@ -172,7 +143,7 @@ const contentStyleT = {
 
         <Col  className='shopCar'>
 
-        <Button onClick={() => routeChange} type='text' className='buttonMenuLogin' style={{background:'none'}} Link to icon={<Avatar size={ { xs: 14, sm: 18, md: 22, lg: 26, xl: 30, xxl: 34 }} style={{fontSize:'1vmax'}} icon={<UserOutlined  />} />} 
+        <Button onClick={() => routeChange ()} type='text' className='buttonMenuLogin' style={{background:'none'}}  icon={<Avatar size={ { xs: 14, sm: 18, md: 22, lg: 26, xl: 30, xxl: 34 }} style={{fontSize:'1vmax'}} icon={<UserOutlined  />} />} 
         {...fontSize}
         >
          INICIAR SESION </Button>
