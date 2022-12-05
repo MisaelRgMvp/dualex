@@ -135,6 +135,7 @@ export default function Register() {
 </Spin>
         </Col>
       </Row>
+      
       </div>
       
   )
