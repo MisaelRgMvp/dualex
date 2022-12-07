@@ -89,14 +89,14 @@ text-align: center;
     text-align: center;
      height: 337px;
      width: 497px;
-   box-shadow:  0 0 5px rgba(0, 0, 0, 0.4);
+  /* box-shadow:  0 0 5px rgba(0, 0, 0, 0.4);*/
    border-radius: 4%;
    transition: height 4s;
   
  }
  .card:not(:hover){
     
-    animation-duration: 1s;
+    animation-duration: 0.5s;
 
     animation-name: slideon;
     

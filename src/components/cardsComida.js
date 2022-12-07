@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import uno from '../images/baner/1.jpg'
+import uno from '../images/dualComida.jpg'
 import {
     Button,
     Space,
@@ -8,7 +8,7 @@ import {
     Select,
     message,
     Row,
-    
+    Image,
     Divider,
     Form,
     Checkbox,
@@ -20,7 +20,7 @@ import {
   import { SketchOutlined , SmileOutlined, SafetyCertificateOutlined, WomanOutlined, UserOutlined, LockOutlined, InfoCircleOutlined, IdcardOutlined, ClockCircleOutlined, DollarOutlined  } from "@ant-design/icons";
 
 import Item from 'antd/lib/list/Item';
-import mvp from '../images/mvp.png'
+import mvp from '../images/dualComida.jpg'
 import delivery from '../desing/delivery.svg'
 import '../desing/desing.css'
 const { Title, Text } = Typography;
@@ -48,9 +48,9 @@ useEffect(() => {
     
     <div  >
     
-     <Card className='card' onClick={() => setModal2Open(true)} loading={isLoading} style={{borderRadius:'px', boxShadow:'0px 0px 5px 2px rgba(1, 1, 1, 0.6)'}}cover={<img alt="example" src={mvp} style={{align:'center'}} loading={isLoading}/>}
+     <Card headStyle={{background:'url("http://localhost:3000/static/media/3.6a5092326c9f88abd1c2.jpg")'}} className='card' onClick={() => setModal2Open(true)} loading={isLoading} 
   >
-
+<Image src={mvp} width="100%" style={{left:0, rigth:0}}/>
     <Title level={3} >Nombre de la comida</Title>
     
     <Text> Precio </Text>

@@ -4,30 +4,12 @@ import { useNavigate, Link } from "react-router-dom";
 import {HomeFilled, UserOutlined, LockFilled} from '@ant-design/icons';
 import { Button, Input, Image, Row, Col, Form, Spin } from 'antd'
 
-const formItemLayout = { 
-  labelCol: {
 
-xs: {
-  span: 12,
-},
-sm: {
-  span: 8,
-},
-},
-wrapperCol: {
 
-xs: {
-  span: 4,
-},
-sm: {
-  span: 20,
-},
-},
-};
 export default function Login() {
   let navigate = useNavigate(); 
   const routeChange = () =>{ 
-    let path = `/login`; 
+    let path = `/`; 
     navigate(path);
   }
 const [isLoading, setIsLoading] = useState(true);
@@ -46,13 +28,17 @@ useEffect(() => {
       return newLoadings;
     });
   }
+
+
+ 
+
   return (
     <div>
       <Row className='Baneer' flex="auto" gutter={1}> 
       <Col>
       
         <Col className='home'>
-        <Button size='large' className='buttonHome' type='text' onClick={routeChange} icon={<HomeFilled />} >REGRESAR</Button>
+        <Button size='large' className='buttonHome' type='text' onClick={() => routeChange ()} icon={<HomeFilled />} >REGRESAR</Button>
         </Col>
         <Col className='titleBanner'><p>DUALEX</p></Col>
 
@@ -70,18 +56,18 @@ useEffect(() => {
         <Col 
         className='containerPrincipalL'
         span={
-          12
-        }xs={39} sm={4} md={6} lg={8} xl={10}><Spin tip="Cargando..." spinning={isLoading}>
+          24
+        }><Spin tip="Cargando..." spinning={isLoading} onLoading={isLoading}>
          <div className='containerLogin' >
           <h1 className='subtitle'>INICIAR SESION</h1>
           
           <Form
-      
+     
           
           >
 
 
-                <Input
+                <Input 
                 className='input' 
                 placeholder='USUARIO'
                 autoSize='true'

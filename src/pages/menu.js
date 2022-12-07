@@ -12,6 +12,7 @@ import {
   Input,
   Drawer,
   Row,
+  Affix,
   Col,
   Modal,
   Avatar,
@@ -20,7 +21,7 @@ import {AudioOutlined, MenuOutlined  } from "@ant-design/icons";
 
 export default function Menu() {
   const { Search } = Input;
-
+  const [top, setTop] = useState(10);
 const contentStyleC = {
   height: '45vh',
     color: '#fff',
@@ -143,10 +144,10 @@ const contentStyleT = {
 
         <Col  className='shopCar'>
 
-        <Button onClick={() => routeChange ()} type='text' className='buttonMenuLogin' style={{background:'none'}}  icon={<Avatar size={ { xs: 14, sm: 18, md: 22, lg: 26, xl: 30, xxl: 34 }} style={{fontSize:'1vmax'}} icon={<UserOutlined  />} />} 
+        <Button onClick={() => routeChange ()} className='buttonMenuLogin' style={{background:'none'}}  icon={<Avatar size={ { xs: 14, sm: 18, md: 22, lg: 26, xl: 30, xxl: 34 }} style={{fontSize:'1vmax'}} icon={<UserOutlined  />} />} 
         {...fontSize}
         >
-         INICIAR SESION </Button>
+         <p className="buttonITxt">INICIAR SESION </p></Button>
 
         
         <Button type="text" className='buttonMenu' onClick={showDrawerS}  >
@@ -158,16 +159,19 @@ const contentStyleT = {
     
         
       
-    </Col>
+    </Col>  
       </Row >
-      <div width="100vw" style={{background:'white',     boxShadow: "0vmax 0vmax 1vh 0.31vw rgba(0, 0, 0, 0.1)"}}> 
-      <Search placeholder="Buscar comida" className='input'  onSearch={onSearch} />
       
-     
     
 < Row />
-</div>
+
+
 <div style={{padding:'2%', paddingBottom:'25vh'}}className="site-drawer-render-in-current-wrapper">
+<Affix offsetTop={top}>
+      <div width="100vw" style={{background:'white',     boxShadow: "0vmax 0vmax 1vh 0.31vw rgba(0, 0, 0, 0.1)"}}> 
+      <Search placeholder="Buscar comida" className='input'  onSearch={onSearch} />
+      </div>
+     </Affix>
   <div  style={{marginBottom:'2vh'}}>
 <Carousel autoplay dots={false} autoplaySpeed={5000} >
 
@@ -189,9 +193,9 @@ const contentStyleT = {
     <Row align='middle'  gutter={[30, 28]}>
     <Drawer 
      xs={20} sm={20} md={12} lg={8} xl={8}
-        className='st'
+     
         title="Basic Drawer"
-        placement="rigth"
+        placement="right"
         onClose={onCloseS}
         open={openS}
         getContainer={false}

@@ -2,12 +2,234 @@
 @import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 body{
-    background-color: #F4F4F4;
+    background-color:white;
 }
 p{
     font-family: lemon;
 }
+@media (max-width:1079px){
+.containerPrincipalM{
+    position: absolute;
+    align-items: start;
+    justify-items: center;
+    right:2%;
+    text-align: center;
+    width: 95vw;
+    height: 100vh;
+   /* padding-top: 6rem;
+    padding-bottom: 6rem;
+    border: 0.5px solid rgb(15, 15, 15);
+    padding: 40px 40px 10px 40px;
 
+   */
+   background-color: rgb(255, 255, 255);
+   border: .5px solid rgba(255, 255, 255, 0.1);
+    z-index: 0;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+} 
+.buttonITxt{
+    position: block;
+    display: none;
+}
+.site-drawer-render-in-current-wrapper {
+    position: sticky !important;
+    height: 100vh;
+  background-color: white I !important;
+    overflow: scroll;
+    right: 0 !important;
+    left: 0 !important;
+    text-align: center;
+  color:black;
+    border: 1px solid #ebedf0;
+    border-radius: 2px;
+  }
+Drawer{
+   width:  90vw;
+   height: 90vh;
+   margin-top: 10vh !important;
+  }
+Col{
+    align-items: center;
+    left: 16;
+    position: absolute;
+}
+
+.Button{
+    border-radius: 0.6rem;
+    text-align: center;
+    position: relative;
+    color: white;
+    max-width: 100%;
+    width: 12vw;
+    height: auto;
+    margin: 1.5rem;
+    font-size: 1.9vh;
+}
+input input{
+    background-color: rgba(255, 255, 255, 0) !important;
+    color: black;
+    font-family:  Lalezar;
+}
+Input::placeholder{
+    font-family:  Lalezar;
+}
+.input{
+    background-color: rgb(255, 255, 255) !important;
+    border:solid 0.2 black;
+   
+    width: 35vw;
+    margin: 1rem;
+    color: black;
+    font-family:  Arial;
+    border-radius: 10;
+    height: 4vh;
+    
+}
+img{
+    margin-bottom: 0.5rem;
+    max-width: 12.0rem;
+}
+a{
+    text-align: right;
+    color: blue;
+    
+    text-decoration: none;
+}
+a:hover{
+    cursor: pointer;
+}
+.bannerTop{
+    position: sticky;
+    height: auto;
+    overflow: hidden;
+    
+    top:0 !important;
+    background-color: rgb(255, 0, 0);
+    width: 100vw !important;
+   height: 10vh !important;
+    left: 0%;
+    right: 0%;
+    display: block;
+    z-index: 100;
+}
+
+.containerSecundarioL{
+    height: 100vh;
+   
+}
+CardsComida{
+    width: 90vw !important;
+}
+.pruebass{
+    justify-content: center;
+    background-image: url(https://yardis.com.mx/wp-content/uploads/2020/07/Hamburguesa-Cowboy.jpg) ;
+    width: 30vw;
+    background-size: cover;
+    height: 100vh;
+    display: flex ;
+    flex-direction: column;
+    background-color: blue;
+}
+.Baneer{
+    max-height: 300px; width: auto !important;
+    display: flex;
+    z-index: 10;
+    position: sticky;
+    min-width: none;
+    top:0 !important;
+    background-color: rgba(255, 255, 255, 1);
+   height: 10vh !important;
+   vertical-align: middle;
+   box-shadow: 0vmax 0vmax 1vh 0.31vw rgba(0, 0, 0, 0);   
+    border-bottom: 0.4px solid rgba(0, 0, 0, 0.25);
+}
+
+.home{
+    display: flex;
+    position: absolute;
+    
+    vertical-align: middle;
+    top:0;
+}
+.buttonMenu{
+    width: 5vw;
+    height: 10vh;
+}
+Avatar{
+    font-size: 1vmax;
+}
+.buttonMenuLogin{
+    text-align: center;
+    height: 10vh;
+    font-family: Arial black;
+    font-size: 1vmax;
+}
+.shopCar{
+    display: flex;
+    position: absolute;
+    
+    vertical-align: middle;
+
+    right: 1vw;
+}
+.containerRegister{
+   position: flex;
+   left: 50%;
+   right: 50%;
+   vertical-align: middle;
+
+}
+.subtitle{
+    font-family: Lalezar;
+    font-size: 8vmin;
+    
+    margin-top: 15vh;
+    line-height: 7vh;
+}
+.icon{
+    color: gray;
+}
+.titleBanner {
+
+color: black;
+font-size: 5vmin;
+font-family: lemon;
+
+
+
+}
+Input::placeholder{
+    background-color: white;
+}
+Input{
+    background-color: white;
+}
+.searchBar::placeholder{
+    width: 35vw;
+    background-color: rgb(255, 255, 255);
+    margin: 1p;
+}
+Search{
+    background-color: white;
+
+}
+Search::placeholder{
+    background-color: white;
+
+}
+Form {
+
+    margin: 0%;
+}
+.home {
+width: 12vw;
+
+
+}
+
+
+}
+@media only screen and (min-width:1080px) and (max-width:3480px){
 .containerPrincipalM{
     position: absolute;
     align-items: start;
@@ -218,4 +440,8 @@ width: 12vw;
 
 
 }
-
+.buttonITxt{
+    position: block;
+    display: inline-block;
+}
+}
