@@ -22,7 +22,6 @@ import {
 import Item from 'antd/lib/list/Item';
 import mvp from '../images/dualComida.jpg'
 import delivery from '../desing/delivery.svg'
-import '../desing/desing.css'
 const { Title, Text } = Typography;
 
 
@@ -41,16 +40,19 @@ useEffect(() => {
   }, []);
   
   return (
-    <div  className='homeContainer'  >
-   
+  
     
-   
-    
-    <div  >
-    
-     <Card headStyle={{background:'url("http://localhost:3000/static/media/3.6a5092326c9f88abd1c2.jpg")'}} className='card' onClick={() => setModal2Open(true)} loading={isLoading} 
+     <Card  className='card' onClick={() => setModal2Open(true)} loading={isLoading} 
   >
-<Image src={mvp} width="100%" style={{left:0, rigth:0}}/>
+    <div style={{display:'block', height: 150, width: '100%'}}>
+    <div style={{display:'block', height: 150, width: '100%'}}>
+    
+
+      <Image preview={false} className='imageCard' src={uno} width="100%" height={'100%'} />
+  </div>
+  </div>
+
+   
     <Title level={3} >Nombre de la comida</Title>
     
     <Text> Precio </Text>
@@ -66,8 +68,7 @@ useEffect(() => {
       <DollarOutlined />
     
      </Card>
-    </div>    
-    </div>
+    
   )
 }
 
