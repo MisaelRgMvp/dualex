@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 body{
     background-color:white;
+    height: 100%;
 }
 p{
     font-family: lemon;
@@ -51,6 +52,8 @@ Drawer{
 Col{
     align-items: center;
     left: 16;
+    vertical-align: middle !important;
+    justify-content: baseline !important;
     position: absolute;
 }
 
@@ -87,7 +90,6 @@ Input::placeholder{
 }
 img{
     margin-bottom: 0.5rem;
-    max-width: 12.0rem;
 }
 a{
     text-align: right;
@@ -128,7 +130,7 @@ CardsComida{
     height: 100vh;
     display: flex ;
     flex-direction: column;
-    background-color: blue;
+    background-color: rgb(255, 255, 255);
 }
 .Baneer{
     max-height: 300px; width: auto !important;
@@ -143,12 +145,21 @@ CardsComida{
     box-shadow: 0vmax 0vmax 1vh 0.31vw rgba(0, 0, 0, 0);   
     border-bottom: 0.4px solid rgba(0, 0, 0, 0.25);
 }
-
+.LoginBtnPc{
+    display: none;
+}
+.LoginMovil{
+    display: block;
+}
 .home{
     display: flex;
     position: absolute;
+<<<<<<< HEAD
     vertical-align: middle;
     top:0;
+=======
+    
+>>>>>>> 74a37deaa979bd745aa73e010836c661af3706d0
 }
 .buttonMenu{
     width: 5vw;
@@ -159,7 +170,7 @@ Avatar{
 }
 .buttonMenuLogin{
     text-align: center;
-    height: 10vh;
+    vertical-align: middle;
     font-family: Arial black;
     font-size: 1vmax;
 }
@@ -185,11 +196,15 @@ Avatar{
 .icon{
     color: gray;
 }
+<<<<<<< HEAD
 .titleBanner {
 color: black;
 font-size: 5vmin;
 font-family: lemon;
 }
+=======
+
+>>>>>>> 74a37deaa979bd745aa73e010836c661af3706d0
 Input::placeholder{
     background-color: white;
 }
@@ -199,14 +214,16 @@ Input{
 .searchBar::placeholder{
     width: 35vw;
     background-color: rgb(255, 255, 255);
-    margin: 1p;
+    margin: 10px;
 }
+
 Search{
     background-color: white;
-
+    border-radius: 25px;
 }
 Search::placeholder{
-    background-color: white;
+    background-color: rgb(255, 0, 0);
+    border-radius: 15px;
 
 }
 Form {
@@ -218,10 +235,18 @@ width: 12vw;
 
 
 }
-
+.modal{
+    width: 100% !important;
+}
 
 }
 @media only screen and (min-width:1080px) and (max-width:3480px){
+    .LoginBtnPc{
+        display: block;
+    }
+    .LoginMovil{
+        display: none !important;
+    }
 .containerPrincipalM{
     position: absolute;
     align-items: start;
@@ -240,12 +265,32 @@ width: 12vw;
    border: .5px solid rgba(255, 255, 255, 0.1);
     z-index: 0;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
-} 
+}
+.modal{
+    width: 80vw !important;
+    
+}
+/* Search{
+    background-color: rgb(188, 63, 63);
+    border-radius: 25px;
+}
+Search::placeholder{
+    background-color: rgb(255, 0, 0);
+    border-radius: 15px;
+
+} */
+.titleBanner {
+
+    color: black;
+    font-family: lemon;
+    display: inline-block;
+    
+    
+    } 
 .site-drawer-render-in-current-wrapper {
     position: sticky !important;
-    height: 100vh;
-  
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden !important;
     right: 0 !important;
     text-align: center;
   color:black;
@@ -274,11 +319,11 @@ Col{
     margin: 1.5rem;
     font-size: 1.9vh;
 }
-input input{
+/* input input{
     background-color: rgba(255, 255, 255, 0) !important;
     color: black;
     font-family:  Lalezar;
-}
+} */
 Input::placeholder{
     font-family:  Lalezar;
 }
@@ -294,9 +339,30 @@ Input::placeholder{
     height: 4vh;
     
 }
+.inputSearch::placeholder{
+    background-color: rgb(0, 11, 169) !important;
+    border:solid 0.2 black;
+   
+    width: 55vw;
+    color: black;
+    font-family:  Arial;
+    border-radius: 20px !important;
+   
+    
+}
+.inputSearch{
+    background-color: rgb(255, 255, 255) !important;
+    border:solid 0.2 black;
+   
+    width: 55vw;
+    color: rgb(250, 0, 0);
+    font-family:  Arial;
+    border-radius: 20px !important;
+   
+    
+}
 img{
     margin-bottom: 0.5rem;
-    max-width: 12.0rem;
 }
 a{
     text-align: right;
@@ -308,7 +374,7 @@ a:hover{
     cursor: pointer;
 }
 .bannerTop{
-    position: sticky;
+    position: absolute;
     height: auto;
     overflow: hidden;
     
@@ -338,11 +404,9 @@ a:hover{
 }
 .Baneer{
     max-height: 300px; width: auto !important;
-    display: flex;
     z-index: 10;
-    position: sticky;
+    position: fixed;
     min-width: none;
-    top:0 !important;
     background-color: rgba(255, 255, 255, 1);
     height: 10vh !important;
     vertical-align: middle;
@@ -356,6 +420,34 @@ a:hover{
     
     vertical-align: middle;
     top:0;
+}
+/* ::-webkit-scrollbar{
+    width: 10px;
+    bottom:0 !important;
+    border-radius: 360px;
+    background-color: #F5F5F5;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #00f; 
+    background-image: -webkit-linear-gradient(90deg,rgba(255, 255, 255, .2) 25%,transparent 25%,transparent 50%,rgba(255, 255, 255, .2) 50%,rgba(255, 255, 255, .2) 75%,transparent 75%,transparent)
+} */
+::-webkit-scrollbar{
+    width: 5px;
+    background-color: #F5F5F5;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.9);
+    border-radius: 10px;
+    background-color: #CCCCCC;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: #0000ff;
+    background-image: -webkit-linear-gradient(90deg,transparent,rgba(0, 0, 0, 0.4) 50%,transparent,transparent)
 }
 .buttonMenu{
     width: 5vw;
@@ -396,9 +488,19 @@ Avatar{
     color: gray;
 }
 .titleBanner {
+<<<<<<< HEAD
     color: black;
     font-size: 5vmin;
     font-family: lemon;
+=======
+
+color: black;
+
+font-family: lemon;
+
+
+
+>>>>>>> 74a37deaa979bd745aa73e010836c661af3706d0
 }
 Input::placeholder{
     background-color: white;
@@ -407,11 +509,11 @@ Input{
     background-color: white;
 }
 .searchBar::placeholder{
-    width: 35vw;
     background-color: rgb(255, 255, 255);
-    margin: 1p;
+   
 }
 Search{
+    width: 35vw;
     background-color: white;
 
 }

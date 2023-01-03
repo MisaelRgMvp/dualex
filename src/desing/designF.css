@@ -84,7 +84,9 @@ Input::placeholder{
     height: 4vh;
     
 }
-
+img{
+    margin-bottom: 0.5rem;
+}
 a{
     text-align: right;
     color: blue;
@@ -198,28 +200,4 @@ Form {
 width: 12vw;
 
 
-}
-.forgotP {
-   width: 35vw;
-    height: 50%;
-    
-    
-}
-.In {
-
-
-max-width: 22vw;
-max-height: 20vh;
-}
-.ButtonF {
-    border-radius: 0.6rem;
-    text-align: center;
-    position: relative;
-    color: white;
-    max-width: 100%;
-    width: 20vw;
-    min-width: 50px;
-    height: auto;  
-    font-size: 1.9vh;
-    box-shadow:  1px 1px 2px rgba(0, 0, 0, 0.5);
 }

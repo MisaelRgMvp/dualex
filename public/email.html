@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: Arial Black, Helvetica, sans-serif;
+            font-weight: 100;
+            width: 100%;
+            border-radius: 6px;
+        }
+        body{
+            width: 50% !important;
+            height: 100%;
+        }
+         .flex-container{
+            position: absolute;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        hr{
+            background-color: #9d5450;
+        }
+    
+        .form-bread{
+
+            width: 50%;
+            border-radius:  90px 90px 10px 10px !important;
+            color: #000;
+            background-image: radial-gradient(circle at 50% 34.83%, #FFD84C 0, #FFC83C 16.67%, #FFB527 33.33%, #F59F00 50%, #EB8900 66.67%, #E37500 83.33%, #DE6300 100%);
+        }
+        .form-lettuce{
+            height: 6rem;
+            width: 50%;
+            color: #000 !important;
+            background-image: linear-gradient(to top, #0FD850 0%, #F9F047 100%);
+        }
+        .form-meat{
+            width: 50%;
+            height: 6rem !important;
+
+            color: #000 !important;
+            background-image: radial-gradient(circle at 55.55% 113.46%, #A58864 0, #9E7C58 16.67%, #956D49 33.33%, #8A5B38 50%, #7E4928 66.67%, #753A1D 83.33%, #6F2D16 100%);
+        }
+        .form-tomatoes{
+            font-family:sans-serif !important;
+            color:#fff;
+            background-color: red;
+            width: 50%;
+        }
+        .form-bread-down{
+
+            width: 50%;
+          
+            border-radius:   10px 10px 90px 90px !important;
+            background-image: radial-gradient(circle at 50% 34.83%, #FFD84C 0, #FFC83C 16.67%, #FFB527 33.33%, #F59F00 50%, #EB8900 66.67%, #E37500 83.33%, #DE6300 100%);
+        }
+        .title{
+            color: #fff !important;
+
+        }
+
+      .text-info{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .codigo{
+            padding: 15px;
+            font-size: 55px;
+            font-family: 'Arial';
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div class="flex-container">
+        <div class="form">
+            <div class="form-bread">
+                <h1 class="title">Dualex</h1>
+               
+                <h2 class="present">Hola, ${usuario.nombre}</h2>
+            </div>
+           
+            <div class="form-lettuce">
+                <h3 class="text-info">Hemos recibido una solicitud para restaurar tu contraseña</h3>
+                <h3 class="text-info">CODIGO DE VERIFICACIÓN:</h3>
+            </div>
+            <div class="form-meat">
+                <p class="codigo">
+                    ${usuario.code}
+                </p>
+            </div>
+            <div class="form-tomatoes">
+                <p class="otp">No compartas esta OTP con nadie. Nuestro equipo de Servicio al Cliente nunca te pedirá tu contraseña, OTP, tarjeta de crédito, o información bancaria. Esperamos verte nuevamente.</p>
+            </div>
+            <div class="form-bread-down">
+                <h3 class="text-fotter">Gracias ${usuario.email}</h3>
+            </div>
+        </div>
+    </div>
+    </center>
+</body>
+</html>

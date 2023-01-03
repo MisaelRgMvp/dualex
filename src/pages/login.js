@@ -3,7 +3,12 @@ import '../desing/designL.css'
 import { useNavigate, Link } from "react-router-dom";
 import {HomeFilled, UserOutlined, LockFilled} from '@ant-design/icons';
 import { Button, Input, Image, Row, Col, Form, Spin } from 'antd'
+import {useAuthContext} from '../context/authContext';
 
+const Logged = () =>{
+  const {login} = useAuthContext();
+  login();
+}
 
 
 export default function Login() {
@@ -83,7 +88,7 @@ useEffect(() => {
                 <br />
                 <Button 
                   loading={loadings[2]}
-                  onClick={() => enterLoading(2)}
+                  onClick={(() => Logged(2))}
                   type="primary" className='Button'>
                     INICIAR SESION
                 </Button>
