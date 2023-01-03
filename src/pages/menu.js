@@ -1,6 +1,8 @@
 import React, { NavLink, useState } from 'react'
 import dos from '../images/baner/2.gif';
+import {useAuthContext} from '../context/authContext';
 import uno from '../images/baner/1.jpg';
+import Porfile from '../components/porfile';
 import tres from '../images/baner/3.jpg';
 import cuatro from '../images/baner/4.jpg';
 import CardsComida from '../components/cardsComida';
@@ -12,6 +14,7 @@ import '../desing/designIn.css'
 import { useNavigate } from "react-router-dom";
 import {  HomeFilled, UserOutlined, LockFilled,PoweroffOutlined, ShoppingCartOutlined,CloseCircleFilled } from '@ant-design/icons';
 import DrawerMenu from '../components/menu'
+
 import {
   Button,
   Carousel,
@@ -24,41 +27,76 @@ import {
   Row,
   Divider,
   Form,
+  Affix,
   Checkbox,
+  
   Grid,
   Col,
   Radio,
   Modal,
   Avatar,
   Image
-} from "antd";
+} from "antd";  
+import { Navigate } from 'react-router-dom';
 import { SketchOutlined ,AudioOutlined , SmileOutlined, SafetyCertificateOutlined, WomanOutlined, LockOutlined, InfoCircleOutlined, IdcardOutlined, MenuOutlined  } from "@ant-design/icons";
 import Password from 'antd/lib/input/Password';
 import Item from 'antd/lib/list/Item';
 
-import { Navigate } from 'react-router-dom';
+const Menu = () => {
+   
+  const BtnLoginTrue = () => {
+     
+    const routeChange = () =>{ 
+      let path = `/login`; 
+      Navigate(path);
+    }
+    return(
+      <>
+      <Button onClick={() => routeChange()} type='text' icon={<><div className='LoginBtnPc'><Avatar size={ { xs: 14, sm: 18, md: 22, lg: 26, xl: 30, xxl: 34 }} style={{fontSize:'1vmax'}} icon={<UserOutlined  />} /> INICIAR SESION </div>
+      <Avatar className='LoginMovil' size={ { xs: 14, sm: 18, md: 22, lg: 26, xl: 34, xxl: 38 }} style={{fontSize:'1vmax'}} icon={<UserOutlined  />} />
+  </>} > 
+  </Button>
+  </>
+  
+  
+  );
+  }
+  
+  const  BtnLogin = () => {
+    
+   
+    return(
+      <>
+  <Porfile style={{width: '90%'}}>
+   </Porfile>
+  </>
+  
+    );
+  }
 
 
-export default function Menu() {
+  const [isLogged, setIsLogged] = useState(true);
+  const [top, setTop] = useState(10);
+  
   const { Search } = Input;
-const suffix = (
-  <AudioOutlined
+  const suffix = (
+    <AudioOutlined
     style={{
       fontSize: 16,
       color: '#1890ff',
-    }}
-  />
-);
-const imageUno = {mvp};
-const contentStyleC = {
-  height: '45vh',
-    color: '#fff',
-  lineHeight: '160px',
-  textAlign: 'center',
+    }}  
+    />  
+    );  
+    const imageUno = {mvp};
+    const contentStyleC = {
+      height: '45vh',
+      color: '#fff',
+      lineHeight: '160px',  
+      textAlign: 'center',
   backgroundImage: 'url("http://localhost:3000/static/media/4.98572e95114716f6a1b0.jpg")',
   backgroundSize: '100% 100%',
   backgroundRepeat: 'no-repeat'
-};
+};  
 
 const contentStyleU = {
   height: '45vh',
@@ -68,7 +106,7 @@ const contentStyleU = {
   backgroundImage: 'url("http://localhost:3000/static/media/1.4af7e858cb9772c2d2c7.jpg")',
   backgroundSize: '100% 100%',
   backgroundRepeat: 'no-repeat'
-};
+};  
 
 const contentStyleD = {
   height: '45vh',
@@ -79,86 +117,82 @@ const contentStyleD = {
   backgroundImage: 'url("http://localhost:3000/static/media/2.311bec426add4f803e26.gif")',
   backgroundSize: '100% 100%',
   backgroundRepeat: 'no-repeat'
-};
+};  
 const contentStyleT = {
   height: '45vh',
     color: '#fff',
-  lineHeight: '160px',
+  lineHeight: '160px',  
   textAlign: 'center',
   backgroundImage: 'url("http://localhost:3000/static/media/3.6a5092326c9f88abd1c2.jpg")',
   backgroundSize: '100% 100%',
   backgroundRepeat: 'no-repeat'
-};
+};  
   const onSearch = (value) => console.log(value);
   const [open, setOpen] = useState(false);
     const [openS, setOpenS] = useState(false);
 
     const showDrawer = () => {
       setOpen(true);
-    };
+    };  
     const showDrawerS = () => {
       setOpenS(true);
       
       };
     const onClose = () => {
       setOpen(false);
-    };
+    };  
     const onCloseS = () => {
         setOpenS(false);
-      };
+      };  
 
     const fontSize = { 
       labelCol: {
     
-    xs: {
+    xs: {  
       span: 12,
-    },
+    },  
     sm: {
       span: 8,
-    },
+    },  
     },
     wrapperCol: {
     
     xs: {
       span: 4,
-    },
+    },  
     sm: {
       span: 20,
-    },
+    },  
     },
     };
    
-        let navigate = useNavigate(); 
-        const routeChange = () =>{ 
-          let path = `/login`; 
-          navigate(path);
-        }
+       
         const [loadings, setLoadings] = useState([]);
         const enterLoading = (index) => {
           setLoadings((prevLoadings) => {
             const newLoadings = [...prevLoadings];
             newLoadings[index] = true;
             return newLoadings;
-          });
-        }
+          });  
+        }  
         const [modal2Open, setModal2Open] = useState(false)
         const ModalComida = (isOpen) => { 
           setModal2Open(isOpen)
-         };
+         }; 
          
-  return (
-    <div>
+  return (   
+    <div style = {{ overflowX: 'hidden', overflowY: 'scroll', height:'100vh' }} className="site-drawer-render-in-current-wrapper">
         <center>
-      <Row className='Baneer' gutter={10}> 
+      <Row style={{background:'white',position:'static',left:0,right:0,borderBottom:'solid 0.2px gray', boxShadow: "0vmax 0vmax 1vh 0.31vw rgba(0, 0, 0, 0.1)"}} > 
       
       
-        <Col className='home'> 
+        <Col span={2}> 
        
-      <Button type="text" className='buttonMenu' onClick={showDrawer} ><MenuOutlined style={{fontSize: '1.8vmax'}} className='iconMenu' /></Button>
+      <Button type="text" className='buttonMenu' onClick={showDrawer} ><MenuOutlined style={{fontSize: '1.8vmax'}} className='iconMenu' /></Button>  
       <Drawer
-        title={<p style={{textAlign:'center', display: 'block', fontSize:'1.9vmax'}} >DUALEX</p>}
+        title={<p style={{textAlign:'center', fontSize:'1.9vmax'}} >DUALEX</p>}
         placement={'left'}
-        closeIcon={<CloseCircleFilled style={{left:'0.5vw', top:'0.5vh', position:'absolute'}} />}
+        closeIcon={<CloseCircleFilled style={{left:'0.5vw', position:'absolute'}} />}
         onClose={onClose}
         open={open}
         
@@ -166,37 +200,35 @@ const contentStyleT = {
         <DrawerMenu style={{width:'100%', height:'100%'}}/>
       </Drawer>
         </Col>
-        <Col  className='titleBanner'><p>DUALEX</p></Col>
+        <Col span={16} ><h1 className='titleBanner'>DUALEX</h1></Col>
         
 
 
-        <Col  className='shopCar'>
+        <Col span={4}>
 
-        <Button onClick={() => routeChange} type='text' className='buttonMenuLogin' style={{background:'none'}} Link to icon={<Avatar size={ { xs: 14, sm: 18, md: 22, lg: 26, xl: 30, xxl: 34 }} style={{fontSize:'1vmax'}} icon={<UserOutlined  />} />} 
-        {...fontSize}
-        >
-         INICIAR SESION </Button>
+{ isLogged
+     ?  <BtnLogin/>
 
-        
+     :  <BtnLoginTrue />
+}      
+    </Col>   
+        <Col span={2}>
         <Button type="text" className='buttonMenu' onClick={showDrawerS}  >
        
 
           <ShoppingCartOutlined style={{fontSize: '1.8vmax'}} className='iconMenu' />
-        </Button>
-     
-    
-        
-      
-    </Col>
+        </Button>  
+     </Col>   
       </Row >
-      <div width="100vw" style={{background:'white',     boxShadow: "0vmax 0vmax 1vh 0.31vw rgba(0, 0, 0, 0.1)"}}> 
-      <Search placeholder="Buscar comida" className='input'  onSearch={onSearch} />
-      
+      <Affix offsetTop={0} style={{position: 'sticky',top:0,zIndex:22, padding:13, background:'white', boxShadow: "0px 5px 5px rgba(0,0,0,0.3)"}}> 
+      <div  > 
+      <Search placeholder="Buscar comida" className='inputSearch' onSearch={onSearch} enterButton/>  
+</div>      
+      </Affix>
      
     
 < Row />
-</div>
-<div style={{padding:'2%', paddingBottom:'25vh'}}className="site-drawer-render-in-current-wrapper">
+<div style={{ margin:'1%', background: '#fff', padding: '2%',  boxShadow: "0vmax 0vmax 1vh 0.5vw rgba(0, 0, 0, 0.3)" }}>
   <div  style={{marginBottom:'2vh'}}>
 <Carousel autoplay dots={false} autoplaySpeed={5000} >
 
@@ -215,12 +247,12 @@ const contentStyleT = {
    
   </Carousel></div>
   
-    <Row align='middle'  gutter={[30, 28]}>
+    <Row align='middle'  gutter={[24, 20]}>
     <Drawer 
      xs={20} sm={20} md={12} lg={8} xl={8}
         className='st'
         title="Basic Drawer"
-        placement="rigth"
+        placement="right"
         onClose={onCloseS}
         open={openS}
         getContainer={false}
@@ -238,55 +270,57 @@ const contentStyleT = {
 
     <Col  span={
           8}
-          xs={20} sm={20}  md={12} lg={8} xl={8}> 
-   {/* <Button onClick={() => ModalComida(true)}> */}
+          xs={24} sm={20}  md={12} lg={8} xl={8}> 
    <CardsComida setModal2Open={setModal2Open} />
-   {/* </Button> */}
       </Col>  
       <Col  span={
           8}
-          xs={20} sm={20}  md={12} lg={8} xl={8}> 
+          xs={24} sm={20}  md={12} lg={8} xl={8}> 
+   <CardsComida setModal2Open={setModal2Open} />
+      </Col>  
+      <Col  span={
+          8}
+          xs={24} sm={20}  md={12} lg={8} xl={8}> 
+   <CardsComida setModal2Open={setModal2Open} />
+      </Col>  
+      <Col  span={
+          8}
+          xs={24} sm={20}  md={12} lg={8} xl={8}> 
+   <CardsComida setModal2Open={setModal2Open} />
+      </Col>  
+      <Col  span={
+          8}
+          xs={24} sm={20}  md={12} lg={8} xl={8}> 
+   <CardsComida setModal2Open={setModal2Open} />
+      </Col>  
+      <Col  span={
+          8}
+          xs={24} sm={20}  md={12} lg={8} xl={8}> 
+   <CardsComida setModal2Open={setModal2Open} />
+      </Col>  
+      <Col  span={
+          8}
+          xs={24} sm={20}  md={12} lg={8} xl={8}> 
    <CardsComida  />
       </Col>  
       <Col  span={
           8}
-          xs={20} sm={20}  md={12} lg={8} xl={8}> 
-   <CardsComida  />
+          xs={24} sm={20}  md={12} lg={8} xl={8}> 
+   <CardsComida setModal2Open={setModal2Open} />
       </Col>  
       <Col  span={
           8}
-          xs={20} sm={20}  md={12} lg={8} xl={8}> 
-   <CardsComida  />
-      </Col>  
-      <Col  span={
-          8}
-          xs={20} sm={20}  md={12} lg={8} xl={8}> 
-   <CardsComida  />
-      </Col>  
-      <Col  span={
-          8}
-          xs={20} sm={20}  md={12} lg={8} xl={8}> 
-   <CardsComida  />
-      </Col>  
-      <Col  span={
-          8}
-          xs={20} sm={20}  md={12} lg={8} xl={8}> 
-   <CardsComida  />
-      </Col>  
-      <Col  span={
-          8}
-          xs={20} sm={20}  md={12} lg={8} xl={8}> 
-   <CardsComida  />
-      </Col>  
-      <Col  span={
-          8}
-          xs={20} sm={20}  md={12} lg={8} xl={8}> 
-    <CardsComida  />
+          xs={24} sm={20}  md={12} lg={8} xl={8}> 
+   <CardsComida setModal2Open={setModal2Open} />
       </Col>  
       
 </Row>
 </div>
 </center>
+
+<div style={{width:'100vw', height:'25vh', background:'#fff',marginTop:'1%', boxShadow: "0vmax 0vmax 1vh 0.5vw rgba(0, 0, 0, 0.3)" }}>
+  fujgo ugou g
+</div>
   
 <Modal
          title="Nombre Comida"
@@ -294,12 +328,12 @@ const contentStyleT = {
          open={modal2Open}
          onOk={() => setModal2Open(false)}
          onCancel={() => setModal2Open(false)}
-         width={'85vw'}
-         bodyStyle={{height: '85vh'}}
+         className='modal'
        >
         <ModalComidaInfo />
        </Modal>
 
-      </div>
+      </div>     
   )
-}
+}  
+export default Menu;
