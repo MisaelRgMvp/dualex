@@ -2,18 +2,8 @@ import React from 'react'
 import '../desing/desing.css'
 import {
     Button,
-    Space,
-    Typography,
     Input,
-    Select,
-    message,
-    Row,
-    Divider,
-    Form,
-    Checkbox,
-    Grid,
-    Radio,
-    Modal
+    Form
   } from "antd";
   import { SketchOutlined , SmileOutlined, SafetyCertificateOutlined, WomanOutlined, UserOutlined, LockOutlined, InfoCircleOutlined, IdcardOutlined  } from "@ant-design/icons";
 import Password from 'antd/lib/input/Password';

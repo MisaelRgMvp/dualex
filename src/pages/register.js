@@ -1,32 +1,15 @@
 import React, { useState, useEffect } from 'react'
-import mvp from '../images/mvp2.png';
-import burger from '../images/burger.jpg'
 import '../desing/designRe.css'
-import {Link, Navigate } from "react-router-dom";
-import {  HomeFilled, UserOutlined, LockFilled,PoweroffOutlined } from '@ant-design/icons';
-import { routeChangeHome, routeLogin } from '../components/navigate'; 
+import {Link} from "react-router-dom";
+import {  HomeFilled, UserOutlined, LockFilled } from '@ant-design/icons';
 import {
   Button,
-  Space,
-  Typography,
   Input,
-  Select,
   Spin,
-  message,
   Row,
-  Divider,
   Form,
-  Checkbox,
-  Grid,
-  Col,
-  Radio,
-  Modal,
-  
+  Col
 } from "antd";
-import { SketchOutlined , SmileOutlined, SafetyCertificateOutlined, WomanOutlined, LockOutlined, InfoCircleOutlined, IdcardOutlined  } from "@ant-design/icons";
-import Password from 'antd/lib/input/Password';
-import Item from 'antd/lib/list/Item';
-import { HomeButton } from '../components/navigate';
 export default function Register() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -36,17 +19,7 @@ export default function Register() {
       
      }, 3000);
     }, []);
-  const fromSuccess=(datos) => {
-
-      alert("Fromulario enviado exitosamente", datos)
-      
-      }
-      
-      const fromFailed=(error) => {
-      
-        alert("Fromulario enviado sin Exito", error)
-        
-        }
+ 
        
         const [loadings, setLoadings] = useState([]);
         const enterLoading = (index) => {
@@ -135,6 +108,7 @@ export default function Register() {
 </Spin>
         </Col>
       </Row>
+
       </div>
       
   )

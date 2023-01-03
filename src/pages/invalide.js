@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Invalide() {
+const Invalide = () => {
     window.location.href = "/";
 
     return (
@@ -9,3 +9,5 @@ export default function Invalide() {
     </div> 
   )
 }
+
+export default Invalide

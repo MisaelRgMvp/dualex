@@ -1,12 +1,8 @@
 import React, { NavLink, useState, useEffect  } from 'react'
-import mvp from '../images/mvp2.png';
-import burger from '../images/burger.jpg'
 import '../desing/designL.css'
 import { useNavigate, Link } from "react-router-dom";
-import { PoweroffOutlined } from '@ant-design/icons';
 import {HomeFilled, UserOutlined, LockFilled} from '@ant-design/icons';
 import { Button, Input, Image, Row, Col, Form, Spin } from 'antd'
-import { Navigate } from 'react-router-dom';
 
 const formItemLayout = { 
   labelCol: {
