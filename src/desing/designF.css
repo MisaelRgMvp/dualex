@@ -61,7 +61,7 @@ Col{
     width: 20vw;
     min-width: 50px;
     height: auto;
-    margin: 1.5rem;
+    
     font-size: 1.9vh;
     box-shadow:  1px 1px 2px rgba(0, 0, 0, 0.5);
 }
@@ -76,18 +76,15 @@ Input::placeholder{
 .input{
     background-color: rgba(255, 255, 255, 0.3) !important;
     border:solid 0.2 black;
-    width: 25vw;
-    margin: 1rem;
+    width: 20vw;
+  
     color: black;
     font-family:  Arial;
     border-radius: 10;
     height: 4vh;
     
 }
-img{
-    margin-bottom: 0.5rem;
-    max-width: 12.0rem;
-}
+
 a{
     text-align: right;
     color: blue;
@@ -201,4 +198,28 @@ Form {
 width: 12vw;
 
 
+}
+.forgotP {
+   width: 35vw;
+    height: 50%;
+    
+    
+}
+.In {
+
+
+max-width: 22vw;
+max-height: 20vh;
+}
+.ButtonF {
+    border-radius: 0.6rem;
+    text-align: center;
+    position: relative;
+    color: white;
+    max-width: 100%;
+    width: 20vw;
+    min-width: 50px;
+    height: auto;  
+    font-size: 1.9vh;
+    box-shadow:  1px 1px 2px rgba(0, 0, 0, 0.5);
 }

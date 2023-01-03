@@ -67,8 +67,9 @@ useEffect(() => {
         className='containerPrincipalf'
         span={12} 
         ><Spin tip="Cargando..." spinning={isLoading}>
-         <div className='containerLogin' >
-         <img preview={false} src={open} width='550vw' height='50vh' ></img>
+         <div className='forgotP' >
+         <img  className='In' preview={false} src={open} style={{  marginTop: '14vh', marginBottom: '3vh'}} ></img>
+         </div>
           <Form
       
           
@@ -95,13 +96,13 @@ useEffect(() => {
                   onClick={() => enterLoading(2)}
                   type="primary"
                   color='blue'
-                 className='Button'
+                 className='ButtonF'
                   >
                      RECUPERAR              </Button>
              
 
           </Form>
-        </div></Spin>
+        </Spin>
         </Col>
       </Row>
       </div>

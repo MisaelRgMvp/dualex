@@ -138,16 +138,15 @@ CardsComida{
     min-width: none;
     top:0 !important;
     background-color: rgba(255, 255, 255, 1);
-   height: 10vh !important;
-   vertical-align: middle;
-   box-shadow: 0vmax 0vmax 1vh 0.31vw rgba(0, 0, 0, 0);   
+    height: 10vh !important;
+    vertical-align: middle;
+    box-shadow: 0vmax 0vmax 1vh 0.31vw rgba(0, 0, 0, 0);   
     border-bottom: 0.4px solid rgba(0, 0, 0, 0.25);
 }
 
 .home{
     display: flex;
     position: absolute;
-    
     vertical-align: middle;
     top:0;
 }
@@ -167,9 +166,7 @@ Avatar{
 .shopCar{
     display: flex;
     position: absolute;
-    
     vertical-align: middle;
-
     right: 1vw;
 }
 .containerRegister{
@@ -182,7 +179,6 @@ Avatar{
 .subtitle{
     font-family: Lalezar;
     font-size: 8vmin;
-    
     margin-top: 15vh;
     line-height: 7vh;
 }
@@ -190,13 +186,9 @@ Avatar{
     color: gray;
 }
 .titleBanner {
-
 color: black;
 font-size: 5vmin;
 font-family: lemon;
-
-
-
 }
 Input::placeholder{
     background-color: white;
@@ -352,9 +344,9 @@ a:hover{
     min-width: none;
     top:0 !important;
     background-color: rgba(255, 255, 255, 1);
-   height: 10vh !important;
-   vertical-align: middle;
-   box-shadow: 0vmax 0vmax 1vh 0.31vw rgba(0, 0, 0, 0);   
+    height: 10vh !important;
+    vertical-align: middle;
+    box-shadow: 0vmax 0vmax 1vh 0.31vw rgba(0, 0, 0, 0);   
     border-bottom: 0.4px solid rgba(0, 0, 0, 0.25);
 }
 
@@ -404,13 +396,9 @@ Avatar{
     color: gray;
 }
 .titleBanner {
-
-color: black;
-font-size: 5vmin;
-font-family: lemon;
-
-
-
+    color: black;
+    font-size: 5vmin;
+    font-family: lemon;
 }
 Input::placeholder{
     background-color: white;
@@ -432,13 +420,10 @@ Search::placeholder{
 
 }
 Form {
-
-    margin: 0%;
+    margin: 0;
 }
 .home {
-width: 12vw;
-
-
+    width: 12vw;
 }
 .buttonITxt{
     position: block;
