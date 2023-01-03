@@ -14,7 +14,6 @@ import '../desing/designIn.css'
 import { useNavigate } from "react-router-dom";
 import {  HomeFilled, UserOutlined, LockFilled,PoweroffOutlined, ShoppingCartOutlined,CloseCircleFilled } from '@ant-design/icons';
 import DrawerMenu from '../components/menu'
-import { FloatButton } from 'antd';
 
 import {
   Button,
@@ -322,7 +321,7 @@ const contentStyleT = {
 <div style={{width:'100vw', height:'25vh', background:'#fff',marginTop:'1%', boxShadow: "0vmax 0vmax 1vh 0.5vw rgba(0, 0, 0, 0.3)" }}>
   fujgo ugou g
 </div>
-<FloatButton.BackTop />
+
   
 <Modal
          title="Nombre Comida"

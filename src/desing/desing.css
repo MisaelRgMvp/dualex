@@ -56,7 +56,7 @@ body{
     padding: 0;
 }
 .imageCard{
-    border-radius: 15px 15px  0 0 !important;
+    border-radius: 15px 15px  4px   4px !important;
 }
 .inputAntR input {
     background-color: rgba(4, 4, 4, 0) !important;
