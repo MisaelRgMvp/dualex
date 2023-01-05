@@ -1,63 +1,63 @@
-@import '~antd/dist/antd.css';
-@import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
-body{
-    background-color:white;
-    height: 100%;
+@import "~antd/dist/antd.css";
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lemon&display=swap");
+body {
+  background-color: white;
+  height: 100%;
 }
-p{
-    font-family: lemon;
+p {
+  font-family: lemon;
 }
-@media (max-width:1079px){
-.containerPrincipalM{
+@media (max-width: 1079px) {
+  .containerPrincipalM {
     position: absolute;
     align-items: start;
     justify-items: center;
-    right:2%;
+    right: 2%;
     text-align: center;
     width: 95vw;
     height: 100vh;
-   /* padding-top: 6rem;
+    /* padding-top: 6rem;
     padding-bottom: 6rem;
     border: 0.5px solid rgb(15, 15, 15);
     padding: 40px 40px 10px 40px;
 
    */
-   background-color: rgb(255, 255, 255);
-   border: .5px solid rgba(255, 255, 255, 0.1);
+    background-color: rgb(255, 255, 255);
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
     z-index: 0;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
-} 
-.buttonITxt{
+  }
+  .buttonITxt {
     position: block;
     display: none;
-}
-.site-drawer-render-in-current-wrapper {
+  }
+  .site-drawer-render-in-current-wrapper {
     position: sticky !important;
     height: 100vh;
-  background-color: white I !important;
+    background-color: white I !important;
     overflow: scroll;
     right: 0 !important;
     left: 0 !important;
     text-align: center;
-  color:black;
+    color: black;
     border: 1px solid #ebedf0;
     border-radius: 2px;
   }
-Drawer{
-   width:  90vw;
-   height: 90vh;
-   margin-top: 10vh !important;
+  Drawer {
+    width: 90vw;
+    height: 90vh;
+    margin-top: 10vh !important;
   }
-Col{
+  Col {
     align-items: center;
     left: 16;
     vertical-align: middle !important;
     justify-content: baseline !important;
     position: absolute;
-}
+  }
 
-.Button{
+  .Button {
     border-radius: 0.6rem;
     text-align: center;
     position: relative;
@@ -67,210 +67,187 @@ Col{
     height: auto;
     margin: 1.5rem;
     font-size: 1.9vh;
-}
-input input{
+  }
+  input input {
     background-color: rgba(255, 255, 255, 0) !important;
     color: black;
-    font-family:  Lalezar;
-}
-Input::placeholder{
-    font-family:  Lalezar;
-}
-.input{
+    font-family: Lalezar;
+  }
+  Input::placeholder {
+    font-family: Lalezar;
+  }
+  .input {
     background-color: rgb(255, 255, 255) !important;
-    border:solid 0.2 black;
-   
+    border: solid 0.2 black;
+
     width: 35vw;
     margin: 1rem;
     color: black;
-    font-family:  Arial;
+    font-family: Arial;
     border-radius: 10;
     height: 4vh;
-    
-}
-img{
+  }
+  img {
     margin-bottom: 0.5rem;
-}
-a{
+  }
+  a {
     text-align: right;
     color: blue;
-    
+
     text-decoration: none;
-}
-a:hover{
+  }
+  a:hover {
     cursor: pointer;
-}
-.bannerTop{
+  }
+  .bannerTop {
     position: sticky;
     height: auto;
     overflow: hidden;
-    
-    top:0 !important;
+
+    top: 0 !important;
     background-color: rgb(255, 0, 0);
     width: 100vw !important;
-   height: 10vh !important;
+    height: 10vh !important;
     left: 0%;
     right: 0%;
     display: block;
     z-index: 100;
-}
+  }
 
-.containerSecundarioL{
+  .containerSecundarioL {
     height: 100vh;
-   
-}
-CardsComida{
+  }
+  CardsComida {
     width: 90vw !important;
-}
-.pruebass{
+  }
+  .pruebass {
     justify-content: center;
-    background-image: url(https://yardis.com.mx/wp-content/uploads/2020/07/Hamburguesa-Cowboy.jpg) ;
+    background-image: url(https://yardis.com.mx/wp-content/uploads/2020/07/Hamburguesa-Cowboy.jpg);
     width: 30vw;
     background-size: cover;
     height: 100vh;
-    display: flex ;
+    display: flex;
     flex-direction: column;
     background-color: rgb(255, 255, 255);
-}
-.Baneer{
-    max-height: 300px; width: auto !important;
+  }
+  .Baneer {
+    max-height: 300px;
+    width: auto !important;
     display: flex;
     z-index: 10;
     position: sticky;
     min-width: none;
-    top:0 !important;
+    top: 0 !important;
     background-color: rgba(255, 255, 255, 1);
     height: 10vh !important;
     vertical-align: middle;
-    box-shadow: 0vmax 0vmax 1vh 0.31vw rgba(0, 0, 0, 0);   
+    box-shadow: 0vmax 0vmax 1vh 0.31vw rgba(0, 0, 0, 0);
     border-bottom: 0.4px solid rgba(0, 0, 0, 0.25);
-}
-.LoginBtnPc{
+  }
+  .LoginBtnPc {
     display: none;
-}
-.LoginMovil{
+  }
+  .LoginMovil {
     display: block;
-}
-.home{
+  }
+  .home {
     display: flex;
     position: absolute;
-<<<<<<< HEAD
-    vertical-align: middle;
-    top:0;
-=======
-    
->>>>>>> 74a37deaa979bd745aa73e010836c661af3706d0
-}
-.buttonMenu{
+  }
+  .buttonMenu {
     width: 5vw;
     height: 10vh;
-}
-Avatar{
+  }
+  Avatar {
     font-size: 1vmax;
-}
-.buttonMenuLogin{
+  }
+  .buttonMenuLogin {
     text-align: center;
     vertical-align: middle;
     font-family: Arial black;
     font-size: 1vmax;
-}
-.shopCar{
+  }
+  .shopCar {
     display: flex;
     position: absolute;
     vertical-align: middle;
     right: 1vw;
-}
-.containerRegister{
-   position: flex;
-   left: 50%;
-   right: 50%;
-   vertical-align: middle;
-
-}
-.subtitle{
+  }
+  .containerRegister {
+    position: flex;
+    left: 50%;
+    right: 50%;
+    vertical-align: middle;
+  }
+  .subtitle {
     font-family: Lalezar;
     font-size: 8vmin;
     margin-top: 15vh;
     line-height: 7vh;
-}
-.icon{
+  }
+  .icon {
     color: gray;
-}
-<<<<<<< HEAD
-.titleBanner {
-color: black;
-font-size: 5vmin;
-font-family: lemon;
-}
-=======
-
->>>>>>> 74a37deaa979bd745aa73e010836c661af3706d0
-Input::placeholder{
+  }
+  Input::placeholder {
     background-color: white;
-}
-Input{
+  }
+  Input {
     background-color: white;
-}
-.searchBar::placeholder{
+  }
+  .searchBar::placeholder {
     width: 35vw;
     background-color: rgb(255, 255, 255);
     margin: 10px;
-}
+  }
 
-Search{
+  Search {
     background-color: white;
     border-radius: 25px;
-}
-Search::placeholder{
+  }
+  Search::placeholder {
     background-color: rgb(255, 0, 0);
     border-radius: 15px;
-
-}
-Form {
-
+  }
+  Form {
     margin: 0%;
-}
-.home {
-width: 12vw;
-
-
-}
-.modal{
+  }
+  .home {
+    width: 12vw;
+  }
+  .modal {
     width: 100% !important;
+  }
 }
-
-}
-@media only screen and (min-width:1080px) and (max-width:3480px){
-    .LoginBtnPc{
-        display: block;
-    }
-    .LoginMovil{
-        display: none !important;
-    }
-.containerPrincipalM{
+@media only screen and (min-width: 1080px) and (max-width: 3480px) {
+  .LoginBtnPc {
+    display: block;
+  }
+  .LoginMovil {
+    display: none !important;
+  }
+  .containerPrincipalM {
     position: absolute;
     align-items: start;
     justify-items: center;
-    right:2%;
+    right: 2%;
     text-align: center;
     width: 95vw;
     height: 100vh;
-   /* padding-top: 6rem;
+    /* padding-top: 6rem;
     padding-bottom: 6rem;
     border: 0.5px solid rgb(15, 15, 15);
     padding: 40px 40px 10px 40px;
 
    */
-   background-color: rgb(255, 255, 255);
-   border: .5px solid rgba(255, 255, 255, 0.1);
+    background-color: rgb(255, 255, 255);
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
     z-index: 0;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
-}
-.modal{
+  }
+  .modal {
     width: 80vw !important;
-    
-}
-/* Search{
+  }
+  /* Search{
     background-color: rgb(188, 63, 63);
     border-radius: 25px;
 }
@@ -279,36 +256,33 @@ Search::placeholder{
     border-radius: 15px;
 
 } */
-.titleBanner {
-
+  .titleBanner {
     color: black;
     font-family: lemon;
     display: inline-block;
-    
-    
-    } 
-.site-drawer-render-in-current-wrapper {
+  }
+  .site-drawer-render-in-current-wrapper {
     position: sticky !important;
     overflow-y: scroll;
     overflow-x: hidden !important;
     right: 0 !important;
     text-align: center;
-  color:black;
+    color: black;
     border: 1px solid #ebedf0;
     border-radius: 2px;
   }
-Drawer{
-   width:  90vw;
-   height: 90vh;
-   margin-top: 10vh !important;
+  Drawer {
+    width: 90vw;
+    height: 90vh;
+    margin-top: 10vh !important;
   }
-Col{
+  Col {
     align-items: center;
     left: 16;
     position: absolute;
-}
+  }
 
-.Button{
+  .Button {
     border-radius: 0.6rem;
     text-align: center;
     position: relative;
@@ -318,110 +292,105 @@ Col{
     height: auto;
     margin: 1.5rem;
     font-size: 1.9vh;
-}
-/* input input{
+  }
+  /* input input{
     background-color: rgba(255, 255, 255, 0) !important;
     color: black;
     font-family:  Lalezar;
 } */
-Input::placeholder{
-    font-family:  Lalezar;
-}
-.input{
+  Input::placeholder {
+    font-family: Lalezar;
+  }
+  .input {
     background-color: rgb(255, 255, 255) !important;
-    border:solid 0.2 black;
-   
+    border: solid 0.2 black;
+
     width: 35vw;
     margin: 1rem;
     color: black;
-    font-family:  Arial;
+    font-family: Arial;
     border-radius: 10;
     height: 4vh;
-    
-}
-.inputSearch::placeholder{
+  }
+  .inputSearch::placeholder {
     background-color: rgb(0, 11, 169) !important;
-    border:solid 0.2 black;
-   
+    border: solid 0.2 black;
+
     width: 55vw;
     color: black;
-    font-family:  Arial;
+    font-family: Arial;
     border-radius: 20px !important;
-   
-    
-}
-.inputSearch{
+  }
+  .inputSearch {
     background-color: rgb(255, 255, 255) !important;
-    border:solid 0.2 black;
-   
+    border: solid 0.2 black;
+
     width: 55vw;
     color: rgb(250, 0, 0);
-    font-family:  Arial;
+    font-family: Arial;
     border-radius: 20px !important;
-   
-    
-}
-img{
+  }
+  img {
     margin-bottom: 0.5rem;
-}
-a{
+  }
+  a {
     text-align: right;
     color: blue;
-    
+
     text-decoration: none;
-}
-a:hover{
+  }
+  a:hover {
     cursor: pointer;
-}
-.bannerTop{
+  }
+  .bannerTop {
     position: absolute;
     height: auto;
     overflow: hidden;
-    
-    top:0 !important;
+
+    top: 0 !important;
     background-color: rgb(255, 0, 0);
     width: 100vw !important;
-   height: 10vh !important;
+    height: 10vh !important;
     left: 0%;
     right: 0%;
     display: block;
     z-index: 100;
-}
+  }
 
-.containerSecundarioL{
+  .containerSecundarioL {
     height: 100vh;
-   
-}
-.pruebass{
+  }
+  .pruebass {
     justify-content: center;
-    background-image: url(https://yardis.com.mx/wp-content/uploads/2020/07/Hamburguesa-Cowboy.jpg) ;
+    background-image: url(https://yardis.com.mx/wp-content/uploads/2020/07/Hamburguesa-Cowboy.jpg);
     width: 30vw;
     background-size: cover;
     height: 100vh;
-    display: flex ;
+    display: flex;
     flex-direction: column;
     background-color: blue;
-}
-.Baneer{
-    max-height: 300px; width: auto !important;
+  }
+  .Baneer {
+    max-height: 300px;
+    width: auto !important;
     z-index: 10;
     position: fixed;
     min-width: none;
     background-color: rgba(255, 255, 255, 1);
     height: 10vh !important;
     vertical-align: middle;
-    box-shadow: 0vmax 0vmax 1vh 0.31vw rgba(0, 0, 0, 0);   
+    box-shadow: 0vmax 0vmax 1vh 0.31vw rgba(0, 0, 0, 0);
     border-bottom: 0.4px solid rgba(0, 0, 0, 0.25);
-}
+  }
 
-.home{
+  .home {
     display: flex;
     position: absolute;
-    
+
     vertical-align: middle;
-    top:0;
-}
-/* ::-webkit-scrollbar{
+    top: 0;
+  }
+  /* ::-webkit-scrollbar{
     width: 10px;
     bottom:0 !important;
     border-radius: 360px;
@@ -435,100 +404,92 @@ a:hover{
     background-color: #00f; 
     background-image: -webkit-linear-gradient(90deg,rgba(255, 255, 255, .2) 25%,transparent 25%,transparent 50%,rgba(255, 255, 255, .2) 50%,rgba(255, 255, 255, .2) 75%,transparent 75%,transparent)
 } */
-::-webkit-scrollbar{
+  ::-webkit-scrollbar {
     width: 5px;
-    background-color: #F5F5F5;
-}
-::-webkit-scrollbar-track{
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.9);
+    background-color: #f5f5f5;
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.9);
     border-radius: 10px;
-    background-color: #CCCCCC;
-}
-::-webkit-scrollbar-thumb{
+    background-color: #cccccc;
+  }
+  ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-color: #0000ff;
-    background-image: -webkit-linear-gradient(90deg,transparent,rgba(0, 0, 0, 0.4) 50%,transparent,transparent)
-}
-.buttonMenu{
+    background-image: -webkit-linear-gradient(
+      90deg,
+      transparent,
+      rgba(0, 0, 0, 0.4) 50%,
+      transparent,
+      transparent
+    );
+  }
+  .buttonMenu {
     width: 5vw;
     height: 10vh;
-}
-Avatar{
+  }
+  Avatar {
     font-size: 1vmax;
-}
-.buttonMenuLogin{
+  }
+  .buttonMenuLogin {
     text-align: center;
     height: 10vh;
     font-family: Arial black;
     font-size: 1vmax;
-}
-.shopCar{
+  }
+  .shopCar {
     display: flex;
     position: absolute;
-    
+
     vertical-align: middle;
 
     right: 1vw;
-}
-.containerRegister{
-   position: flex;
-   left: 50%;
-   right: 50%;
-   vertical-align: middle;
-
-}
-.subtitle{
+  }
+  .containerRegister {
+    position: flex;
+    left: 50%;
+    right: 50%;
+    vertical-align: middle;
+  }
+  .subtitle {
     font-family: Lalezar;
     font-size: 8vmin;
-    
+
     margin-top: 15vh;
     line-height: 7vh;
-}
-.icon{
+  }
+  .icon {
     color: gray;
-}
-.titleBanner {
-<<<<<<< HEAD
+  }
+  .titleBanner {
     color: black;
-    font-size: 5vmin;
+
     font-family: lemon;
-=======
-
-color: black;
-
-font-family: lemon;
-
-
-
->>>>>>> 74a37deaa979bd745aa73e010836c661af3706d0
-}
-Input::placeholder{
+  }
+  Input::placeholder {
     background-color: white;
-}
-Input{
+  }
+  Input {
     background-color: white;
-}
-.searchBar::placeholder{
+  }
+  .searchBar::placeholder {
     background-color: rgb(255, 255, 255);
-   
-}
-Search{
+  }
+  Search {
     width: 35vw;
     background-color: white;
-
-}
-Search::placeholder{
+  }
+  Search::placeholder {
     background-color: white;
-
-}
-Form {
+  }
+  Form {
     margin: 0;
-}
-.home {
+  }
+  .home {
     width: 12vw;
-}
-.buttonITxt{
+  }
+  .buttonITxt {
     position: block;
     display: inline-block;
-}
+  }
 }
