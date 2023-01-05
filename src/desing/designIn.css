@@ -2,12 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 body{
-    background-color: #F4F4F4;
+    background-color:white;
+    height: 100%;
 }
 p{
     font-family: lemon;
 }
-
+@media (max-width:1079px){
 .containerPrincipalM{
     position: absolute;
     align-items: start;
@@ -27,12 +28,17 @@ p{
     z-index: 0;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
 } 
+.buttonITxt{
+    position: block;
+    display: none;
+}
 .site-drawer-render-in-current-wrapper {
     position: sticky !important;
     height: 100vh;
-  
+  background-color: white I !important;
     overflow: scroll;
     right: 0 !important;
+    left: 0 !important;
     text-align: center;
   color:black;
     border: 1px solid #ebedf0;
@@ -46,6 +52,8 @@ Drawer{
 Col{
     align-items: center;
     left: 16;
+    vertical-align: middle !important;
+    justify-content: baseline !important;
     position: absolute;
 }
 
@@ -82,7 +90,6 @@ Input::placeholder{
 }
 img{
     margin-bottom: 0.5rem;
-    max-width: 12.0rem;
 }
 a{
     text-align: right;
@@ -112,6 +119,9 @@ a:hover{
     height: 100vh;
    
 }
+CardsComida{
+    width: 90vw !important;
+}
 .pruebass{
     justify-content: center;
     background-image: url(https://yardis.com.mx/wp-content/uploads/2020/07/Hamburguesa-Cowboy.jpg) ;
@@ -120,7 +130,7 @@ a:hover{
     height: 100vh;
     display: flex ;
     flex-direction: column;
-    background-color: blue;
+    background-color: rgb(255, 255, 255);
 }
 .Baneer{
     max-height: 300px; width: auto !important;
@@ -135,6 +145,264 @@ a:hover{
    box-shadow: 0vmax 0vmax 1vh 0.31vw rgba(0, 0, 0, 0);   
     border-bottom: 0.4px solid rgba(0, 0, 0, 0.25);
 }
+.LoginBtnPc{
+    display: none;
+}
+.LoginMovil{
+    display: block;
+}
+.home{
+    display: flex;
+    position: absolute;
+    
+}
+.buttonMenu{
+    width: 5vw;
+    height: 10vh;
+}
+Avatar{
+    font-size: 1vmax;
+}
+.buttonMenuLogin{
+    text-align: center;
+    vertical-align: middle;
+    font-family: Arial black;
+    font-size: 1vmax;
+}
+.shopCar{
+    display: flex;
+    position: absolute;
+    
+    vertical-align: middle;
+
+    right: 1vw;
+}
+.containerRegister{
+   position: flex;
+   left: 50%;
+   right: 50%;
+   vertical-align: middle;
+
+}
+.subtitle{
+    font-family: Lalezar;
+    font-size: 8vmin;
+    
+    margin-top: 15vh;
+    line-height: 7vh;
+}
+.icon{
+    color: gray;
+}
+
+Input::placeholder{
+    background-color: white;
+}
+Input{
+    background-color: white;
+}
+.searchBar::placeholder{
+    width: 35vw;
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+}
+
+Search{
+    background-color: white;
+    border-radius: 25px;
+}
+Search::placeholder{
+    background-color: rgb(255, 0, 0);
+    border-radius: 15px;
+
+}
+Form {
+
+    margin: 0%;
+}
+.home {
+width: 12vw;
+
+
+}
+.modal{
+    width: 100% !important;
+}
+
+}
+@media only screen and (min-width:1080px) and (max-width:3480px){
+    .LoginBtnPc{
+        display: block;
+    }
+    .LoginMovil{
+        display: none !important;
+    }
+.containerPrincipalM{
+    position: absolute;
+    align-items: start;
+    justify-items: center;
+    right:2%;
+    text-align: center;
+    width: 95vw;
+    height: 100vh;
+   /* padding-top: 6rem;
+    padding-bottom: 6rem;
+    border: 0.5px solid rgb(15, 15, 15);
+    padding: 40px 40px 10px 40px;
+
+   */
+   background-color: rgb(255, 255, 255);
+   border: .5px solid rgba(255, 255, 255, 0.1);
+    z-index: 0;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+}
+.modal{
+    width: 80vw !important;
+    
+}
+/* Search{
+    background-color: rgb(188, 63, 63);
+    border-radius: 25px;
+}
+Search::placeholder{
+    background-color: rgb(255, 0, 0);
+    border-radius: 15px;
+
+} */
+.titleBanner {
+
+    color: black;
+    font-family: lemon;
+    display: inline-block;
+    
+    
+    } 
+.site-drawer-render-in-current-wrapper {
+    position: sticky !important;
+    overflow-y: scroll;
+    overflow-x: hidden !important;
+    right: 0 !important;
+    text-align: center;
+  color:black;
+    border: 1px solid #ebedf0;
+    border-radius: 2px;
+  }
+Drawer{
+   width:  90vw;
+   height: 90vh;
+   margin-top: 10vh !important;
+  }
+Col{
+    align-items: center;
+    left: 16;
+    position: absolute;
+}
+
+.Button{
+    border-radius: 0.6rem;
+    text-align: center;
+    position: relative;
+    color: white;
+    max-width: 100%;
+    width: 12vw;
+    height: auto;
+    margin: 1.5rem;
+    font-size: 1.9vh;
+}
+/* input input{
+    background-color: rgba(255, 255, 255, 0) !important;
+    color: black;
+    font-family:  Lalezar;
+} */
+Input::placeholder{
+    font-family:  Lalezar;
+}
+.input{
+    background-color: rgb(255, 255, 255) !important;
+    border:solid 0.2 black;
+   
+    width: 35vw;
+    margin: 1rem;
+    color: black;
+    font-family:  Arial;
+    border-radius: 10;
+    height: 4vh;
+    
+}
+.inputSearch::placeholder{
+    background-color: rgb(0, 11, 169) !important;
+    border:solid 0.2 black;
+   
+    width: 55vw;
+    color: black;
+    font-family:  Arial;
+    border-radius: 20px !important;
+   
+    
+}
+.inputSearch{
+    background-color: rgb(255, 255, 255) !important;
+    border:solid 0.2 black;
+   height: 6vh;
+    width: 55vw;
+    color: rgb(250, 0, 0);
+    font-family:  Arial;
+    border-radius: 15px !important;
+   
+    
+}
+img{
+    margin-bottom: 0.5rem;
+}
+a{
+    text-align: right;
+    color: blue;
+    
+    text-decoration: none;
+}
+a:hover{
+    cursor: pointer;
+}
+.bannerTop{
+    position: absolute;
+    height: auto;
+    overflow: hidden;
+    
+    top:0 !important;
+    background-color: rgb(255, 0, 0);
+    width: 100vw !important;
+   height: 10vh !important;
+    left: 0%;
+    right: 0%;
+    display: block;
+    z-index: 100;
+}
+
+.containerSecundarioL{
+    height: 100vh;
+   
+}
+.pruebass{
+    justify-content: center;
+    background-image: url(https://yardis.com.mx/wp-content/uploads/2020/07/Hamburguesa-Cowboy.jpg) ;
+    width: 30vw;
+    background-size: cover;
+    height: 100vh;
+    display: flex ;
+    flex-direction: column;
+    background-color: blue;
+}
+.Baneer{
+    max-height: 300px; width: auto !important;
+    z-index: 10;
+    position: fixed;
+    min-width: none;
+    background-color: rgba(255, 255, 255, 1);
+   height: 10vh !important;
+   vertical-align: middle;
+   box-shadow: 0vmax 0vmax 1vh 0.31vw rgba(0, 0, 0, 0);   
+    border-bottom: 0.4px solid rgba(0, 0, 0, 0.25);
+}
 
 .home{
     display: flex;
@@ -142,6 +410,34 @@ a:hover{
     
     vertical-align: middle;
     top:0;
+}
+/* ::-webkit-scrollbar{
+    width: 10px;
+    bottom:0 !important;
+    border-radius: 360px;
+    background-color: #F5F5F5;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #00f; 
+    background-image: -webkit-linear-gradient(90deg,rgba(255, 255, 255, .2) 25%,transparent 25%,transparent 50%,rgba(255, 255, 255, .2) 50%,rgba(255, 255, 255, .2) 75%,transparent 75%,transparent)
+} */
+::-webkit-scrollbar{
+    width: 5px;
+    background-color: #F5F5F5;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.9);
+    border-radius: 10px;
+    background-color: #CCCCCC;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: #0000ff;
+    background-image: -webkit-linear-gradient(90deg,transparent,rgba(0, 0, 0, 0.4) 50%,transparent,transparent)
 }
 .buttonMenu{
     width: 5vw;
@@ -184,7 +480,7 @@ Avatar{
 .titleBanner {
 
 color: black;
-font-size: 5vmin;
+
 font-family: lemon;
 
 
@@ -197,11 +493,11 @@ Input{
     background-color: white;
 }
 .searchBar::placeholder{
-    width: 35vw;
     background-color: rgb(255, 255, 255);
-    margin: 1p;
+   
 }
 Search{
+    width: 35vw;
     background-color: white;
 
 }
@@ -218,4 +514,8 @@ width: 12vw;
 
 
 }
-
+.buttonITxt{
+    position: block;
+    display: inline-block;
+}
+}

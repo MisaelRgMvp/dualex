@@ -1,13 +1,15 @@
 @import '~antd/dist/antd.css';
 @import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+@media (max-width:1079px){
 .containerPrincipalL{
     position: absolute;
-    align-items: start;
+    align-items: center;
     justify-items: center;
-    right:2%;
+   left: 1;
+   right: 0;
     text-align: center;
-    width: 35vw;
+    width:100vw !important;
     height: 100vh;
    /* padding-top: 6rem;
     padding-bottom: 6rem;
@@ -46,7 +48,7 @@ Input::placeholder{
 .input{
     background-color: rgba(255, 255, 255, 0.3) !important;
     border:solid 0.2 black;
-    width: 25vw;
+    width: 62vw !important;
     
     color: black;
     font-family:  Arial;
@@ -56,7 +58,6 @@ Input::placeholder{
 }
 img{
     margin-bottom: 0.5rem;
-    max-width: 12.0rem;
 }
 a{
     text-align: right;
@@ -87,7 +88,7 @@ a:hover{
     height: 100vh;
    
 }
-.pruebass{
+/* .pruebass{
     justify-content: center;
     background-image: url(https://yardis.com.mx/wp-content/uploads/2020/07/Hamburguesa-Cowboy.jpg) ;
     width: 30vw;
@@ -96,7 +97,7 @@ a:hover{
     display: flex ;
     flex-direction: column;
     background-color: blue;
-}
+} */
 .Baneer{
     max-height: 300px; width: auto !important;
     display: flex ;
@@ -112,28 +113,20 @@ a:hover{
    vertical-align: middle;
 
 }
-.home{
-    display: flex;
-    position: flex;
-    width: max-content;
-    height: max-content;
-    vertical-align: middle;
-    top: 3vh;
-    
 
-}
+
 .containerRegister{
    position: flex;
    left: 50%;
    right: 50%;
-   vertical-align: middle;
 
+   
 }
 .subtitle{
     font-family: Lalezar;
     font-size: 8vmin;
     
-    margin-top: 15vh;
+    
     line-height: 7vh;
 }
 .icon{
@@ -158,7 +151,177 @@ Form {
     margin: 0%;
 }
 .home {
-width: 12vw;
+  
+    position: fixed;
+    width: max-content;
+    height: max-content;
+    vertical-align: middle;
+    top: 3vh;
+    
 
-
+}
+}
+@media only screen and (min-width:1080px) and (max-width:3480px){
+    .containerPrincipalL{
+        position: absolute;
+        align-items: start;
+        justify-items: center;
+        right:2%;
+        text-align: center;
+      width: 32vw;
+       /* padding-top: 6rem;
+        padding-bottom: 6rem;
+        border: 0.5px solid rgb(15, 15, 15);
+        padding: 40px 40px 10px 40px;
+    
+       */
+       background-color: rgb(255, 255, 255);
+       box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+       border: .5px solid rgba(255, 255, 255, 0.1);
+        z-index: 0;
+        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+    } 
+    .buttonHome{
+        height: 100%;
+    }
+    .Button{
+        border-radius: 0.6rem;
+        text-align: center;
+        position: relative;
+        color: white;
+        max-width: 100%;
+        width: 12vw;
+        height: auto;
+        margin: 1.5rem;
+        font-size: 1.9vh;
+        box-shadow:  1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+    
+    .input input{
+        background-color: rgba(0, 0, 0, 0) !important;
+        color: black;
+        font-family:  Lalezar;
+    }
+    Input::placeholder{
+        font-family:  Lalezar;
+    }
+    .input{
+        background-color: rgba(255, 255, 255, 0.3) !important;
+        border:solid 0.2 black;
+        width: 22vw !important;
+        margin: 1rem;
+        color: black;
+        font-family:  Arial;
+        border-radius: 10px;
+       height: 4vh;
+    }
+    img{
+        margin-bottom: 0.5rem;
+    
+    
+        
+    }
+    a{
+        text-align: right;
+        color: blue;
+        text-decoration: none;
+    }
+    .bannerTop{
+        position: relative;
+        height: auto;
+        overflow: hidden;
+        
+        top:0 !important;
+        background-color: rgba(255, 255, 255, 0);
+        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+        width: 100vw !important;
+       height: 10vh !important;
+        left: 0%;
+        right: 0%;
+        display: block;
+        z-index: 100;
+    }
+    
+    .containerSecundarioL{
+        height: 100vh;
+       
+    }
+    .pruebass{
+        justify-content: center;
+        background-image: url(https://yardis.com.mx/wp-content/uploads/2020/07/Hamburguesa-Cowboy.jpg) ;
+        width: 30vw;
+        background-size: cover;
+        height: 100vh;
+        display: flex ;
+        flex-direction: column;
+        background-color: blue;
+    }
+    .Baneer{
+        max-height: 300px; width: auto !important;
+    
+        z-index: 10;
+        position: fixed;
+            min-width: none;
+        top:0 !important;
+        background-color: rgba(255, 255, 255, 1);
+        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+        width: 100vw !important;
+       height: 10vh !important;
+       vertical-align: middle;
+    
+    }
+    .home{
+       
+        position: fixed;
+        width: max-content;
+        height: max-content;
+        vertical-align: middle;
+        top: 3vh;
+        
+    
+    }
+    .containerLogin{
+       position: flex;
+       left: 50%;
+       right: 0%;
+      
+       vertical-align: middle;
+    
+    }
+    .subtitle{
+        font-family: Lalezar;
+        font-size: 8vmin;
+        
+        margin-top: 15vh;
+        line-height: 7vh;
+    }
+    .icon{
+        color: gray;
+    }
+    .titleBanner {
+    
+    color: black;
+    top: 1vh;
+    
+    font-size: 5vmin;
+    font-family: lemon;
+    position: fixed;
+    left: 40vw;
+    right: 40vw;
+    
+    
+    }
+    
+    Form {
+    
+        margin: 0%;
+    }
+    .home {
+    width: 12vw;
+    
+    
+    }
+    Col {
+        border-radius: 10;
+    }
 }

@@ -1,5 +1,6 @@
 import React, { NavLink, useState } from 'react'
 import dos from '../images/baner/2.gif';
+import {useAuthContext} from '../context/authContext';
 import uno from '../images/baner/1.jpg';
 import Porfile from '../components/porfile';
 import tres from '../images/baner/3.jpg';
@@ -37,7 +38,7 @@ import {
   Image
 } from "antd";  
 import { Navigate } from 'react-router-dom';
-import { SketchOutlined ,AudioOutlined , SmileOutlined, SafetyCertificateOutlined, WomanOutlined, LockOutlined, InfoCircleOutlined, IdcardOutlined, MenuOutlined  } from "@ant-design/icons";
+import { SketchOutlined,SearchOutlined ,AudioOutlined , SmileOutlined, SafetyCertificateOutlined, WomanOutlined, LockOutlined, InfoCircleOutlined, IdcardOutlined, MenuOutlined  } from "@ant-design/icons";
 import Password from 'antd/lib/input/Password';
 import Item from 'antd/lib/list/Item';
 
@@ -199,11 +200,11 @@ const contentStyleT = {
         <DrawerMenu style={{width:'100%', height:'100%'}}/>
       </Drawer>
         </Col>
-        <Col span={16} ><h1 className='titleBanner'>DUALEX</h1></Col>
+        <Col span={18} ><p style={{fontSize:'3vmax', margin:0}}>DUALEX</p></Col>
         
 
 
-        <Col span={4}>
+        <Col span={2} style={{alignContent:'middle'}}>
 
 { isLogged
      ?  <BtnLogin/>
@@ -219,9 +220,9 @@ const contentStyleT = {
         </Button>  
      </Col>   
       </Row >
-      <Affix offsetTop={0} style={{position: 'sticky',top:0,zIndex:22, padding:13, background:'white', boxShadow: "0px 5px 5px rgba(0,0,0,0.3)"}}> 
+      <Affix offsetTop={0} style={{position: 'sticky',top:'0%',zIndex:22, padding:13, background:'white', boxShadow: "0px 5px 5px rgba(0,0,0,0.3)"}}> 
       <div  > 
-      <Search placeholder="Buscar comida" className='inputSearch' onSearch={onSearch} enterButton/>  
+      <Input placeholder="Buscar comida" className='inputSearch' onPressEnter={()=>onSearch()} suffix={<Button type="text" icon={<SearchOutlined />} style={{background:'none'}} shape="circle"></Button>}/>  
 </div>      
       </Affix>
      

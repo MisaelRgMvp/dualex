@@ -48,14 +48,15 @@ export default function Register() {
       
         <Col  className='containerSecundarioL' span={
           12
-        }>
+        }xs={0} sm={16} md={12} lg={8} xl={4}> 
           <div  style={{position: 'fixed'}} className='pruebass' />
         </Col>
+
         <Col 
         className='containerPrincipalL'
         span={
-          12
-        }><Spin tip="Cargando..." spinning={isLoading}>
+          24
+        } ><Spin tip="Cargando..." spinning={isLoading}>
                       <div className='containerRegister' >
                       <h1 className='subtitle'>REGISTRO</h1>
          <Form >
@@ -100,7 +101,7 @@ export default function Register() {
        
 
         <Button   loading={loadings[2]} onClick={() => enterLoading(2)} className='Button' type='primary' size='large' htmlType='submit' > Registrar Usuario </Button>
-        <p>Ya tienes cuenta?         <Button><Link to='/login'>Iniciar Sesion</Link></Button>
+        <p>Ya tienes cuenta?         <Link to='/login'>Iniciar Sesion</Link>
         </p>
 </Form>
 
