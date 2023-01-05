@@ -323,14 +323,16 @@ Search::placeholder{
   }
   .inputSearch {
     background-color: rgb(255, 255, 255) !important;
-    border: solid 0.2 black;
-
+    border:solid 0.2 black;
+   height: 6vh;
     width: 55vw;
     color: rgb(250, 0, 0);
-    font-family: Arial;
+    font-family:  Arial;
     border-radius: 20px !important;
-  }
-  img {
+   
+    
+}
+img{
     margin-bottom: 0.5rem;
   }
   a {
