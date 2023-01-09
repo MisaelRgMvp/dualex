@@ -22,6 +22,7 @@ import {
 import Item from 'antd/lib/list/Item';
 import mvp from '../images/dualComida.jpg'
 import delivery from '../desing/delivery.svg'
+import '../desing/desing.css'
 const { Title, Text } = Typography;
 
 

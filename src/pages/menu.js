@@ -29,7 +29,8 @@ import {
   Form,
   Affix,
   Checkbox,
-  
+  Collapse,
+  Badge,
   Grid,
   Col,
   Radio,
@@ -73,6 +74,28 @@ const Menu = () => {
   
     );
   }
+     
+  const { Panel } = Collapse;
+  const [visible, setVisible] = useState(false);
+  const [quantity, setQuantity] = useState(1);
+  const [cartCount, setCartCount] = useState(0);
+
+  const showModal = () => {
+    
+    setVisible(true);
+  };
+  const handleCancel = () => {
+    setModal2Open(false);
+  };
+  const decreaseQuantity = () => {
+    setQuantity(Math.max(quantity - 1, 1));
+  };
+  const increaseQuantity = () => {
+    setQuantity(quantity + 1);
+  };
+  const addToCart = () => {
+    setCartCount(cartCount + quantity);
+  };
 
 
   const [isLogged, setIsLogged] = useState(true);
@@ -132,7 +155,11 @@ const contentStyleT = {
     const [openS, setOpenS] = useState(false);
 
     const showDrawer = () => {
-      setOpen(true);
+      
+      if(loadings!=false){
+
+        setOpen(true);
+      }
     };  
     const showDrawerS = () => {
       setOpenS(true);
@@ -176,9 +203,7 @@ const contentStyleT = {
           });  
         }  
         const [modal2Open, setModal2Open] = useState(false)
-        const ModalComida = (isOpen) => { 
-          setModal2Open(isOpen)
-         }; 
+      
          
   return (   
     <div style = {{ overflowX: 'hidden', overflowY: 'scroll', height:'100vh' }} className="site-drawer-render-in-current-wrapper">
@@ -271,7 +296,7 @@ const contentStyleT = {
     <Col  span={
           8}
           xs={24} sm={20}  md={12} lg={8} xl={8}> 
-   <CardsComida setModal2Open={setModal2Open} />
+   <CardsComida  />
       </Col>  
       <Col  span={
           8}
@@ -325,9 +350,24 @@ const contentStyleT = {
 <Modal
          title="Nombre Comida"
          centered
+         
+       
          open={modal2Open}
-         onOk={() => setModal2Open(false)}
-         onCancel={() => setModal2Open(false)}
+         
+         footer={[
+          
+          <Col overlap > 
+
+          <Button onClick={decreaseQuantity} style={{margin:'2%'}}>-</Button>
+                <Badge count={quantity} key="cart"   >
+              <ShoppingCartOutlined style={{fontSize:35}} />
+          </Badge>
+  <Button onClick={increaseQuantity} style={{margin:'2%'}}>+</Button>,
+            <Button type="primary" onClick={addToCart}>
+              Añadir al carrito 
+            </Button>
+          </Col>
+        ]}
          className='modal'
        >
         <ModalComidaInfo />

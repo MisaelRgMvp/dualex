@@ -11,6 +11,7 @@ import Menu from './pages/menu';
 import MyFooter from './components/footer';
 import Misa from './components/Misa';
 import CardsComida from './components/cardsComida';
+import CreateMealWindow from './pages/createMealWindow';
 export default function App() {
   return (
     <div >
@@ -26,6 +27,7 @@ export default function App() {
           <Route path='/forgot' element={<ForgotP/>} />
           <Route path='/708' element={<MyFooter/>} />
           <Route path='/misa' element={<Misa/>}/>
+          <Route path='/m' element={<CreateMealWindow/>}/>
         </Routes>
       </BrowserRouter>
     </div>
