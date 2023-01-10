@@ -1,27 +1,37 @@
 
 import React,{useState} from 'react';
-import  { Form, Input, Card, Upload, Col, Row, Select } from 'antd'; 
+import  { Form, Input, Card, Upload, Col, Row, Select, Button, Image } from 'antd'; 
 import Icon from '@ant-design/icons';
 import { CloudUploadOutlined } from '@ant-design/icons';
 import './Meal.css';
 export default function CreateMealWindow() {
-    
-    const [fileList, setFileList] = useState([]);
-    const handleChange = ({ fileList: newFileList }) => {
-        setFileList(newFileList);
-      };
+  const [image, setImage] = useState(null);
+
+  const handleChange = info => {
+    setImage(info.file.originFileObj);
+  };
     return (
       <Card bodyStyle={{ boxShadow: '0 2px 8px rgba(0,0,0,0.15)' }}>
         <Form labelCol={{ xs: 6, sm: 4 }} wrapperCol={{ xs: 18, sm: 20 }}>
           <Row>
             <Col xs={24} sm={8}>
               <Card cover={null}>
-              <Upload listType="picture-card" fileList={fileList} onChange={handleChange}>
+              {/* <Upload listType="picture-card" fileList={fileList} showUploadList={false} onChange={handleChange} maxCount={1} previewFile>
+                <img src='' alt='preview' />
                 <CloudUploadOutlined style={{fontSize:'90px'}}/>
-                  <p>
-                    <Icon type="upload"  /> Haz clic para seleccionar una imagen de la comida
-                  </p>
-                </Upload>
+                </Upload> */}
+                  <Upload accept="image/*" listType='picture-card' maxCount={1} onChange={handleChange}>
+      {image
+     ?
+     <Button>Subir imagen</Button>
+
+      :
+      <></>
+
+      }
+    </Upload>
+
+
               </Card >
             </Col>
             <Col xs={24} sm={16}>

@@ -20,7 +20,7 @@ export default function App() {
           <Route path='/login' element={<Login />}/>
           <Route path='/image' element={<SImage />}/>
           <Route path={REGISTER} element={<Register />}/>
-          <Route path='*' element={<Invalide />}/>
+         
           <Route path='/d' element={<BadgeR />}/>
           <Route path='/ds' element={<CardsComida />}/>          
           <Route path={MENU} element={<Menu/>} />

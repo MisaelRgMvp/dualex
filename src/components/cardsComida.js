@@ -29,7 +29,6 @@ const { Title, Text } = Typography;
 
 
 
-
 function CardsComida({setModal2Open}) {
   const [isLoading, setIsLoading] = useState(true);
 useEffect(() => {
