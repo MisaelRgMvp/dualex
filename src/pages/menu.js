@@ -42,6 +42,7 @@ import { Navigate } from 'react-router-dom';
 import { SketchOutlined,SearchOutlined ,AudioOutlined , SmileOutlined, SafetyCertificateOutlined, WomanOutlined, LockOutlined, InfoCircleOutlined, IdcardOutlined, MenuOutlined  } from "@ant-design/icons";
 import Password from 'antd/lib/input/Password';
 import Item from 'antd/lib/list/Item';
+import MyFooter from '../components/footer';
 
 const Menu = () => {
    
@@ -343,9 +344,10 @@ const contentStyleT = {
 </div>
 </center>
 
-<div style={{width:'100vw', height:'25vh', background:'#fff',marginTop:'1%', boxShadow: "0vmax 0vmax 1vh 0.5vw rgba(0, 0, 0, 0.3)" }}>
-  fujgo ugou g
+<div style={{width:'100vw', height:'25vh', background:'#fff',marginTop:'1%', boxShadow: "0vmax 0vmax 1vh 0.5vw rgba(0, 0, 0, 0.3)", position:'relative', bottom:'0 !important' }}>
+  <MyFooter />
 </div>
+<div>holas</div>
   
 <Modal
          title="Nombre Comida"
