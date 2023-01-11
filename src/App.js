@@ -1,4 +1,5 @@
 import React from 'react';
+import 'antd/dist/reset.css';
 import {REGISTER, PRIVATE, LOGIN, MENU } from './routes/paths';
 import BadgeR from './components/badge'
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
