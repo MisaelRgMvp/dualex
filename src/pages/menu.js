@@ -347,7 +347,7 @@ const contentStyleT = {
 <div style={{width:'100vw', height:'25vh', background:'#fff',marginTop:'1%', boxShadow: "0vmax 0vmax 1vh 0.5vw rgba(0, 0, 0, 0.3)", position:'relative', bottom:'0 !important' }}>
   <MyFooter />
 </div>
-<div>holas</div>
+<div>  </div>
   
 <Modal
          title="Nombre Comida"

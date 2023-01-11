@@ -27,7 +27,7 @@ export default function App() {
           <Route path='/forgot' element={<ForgotP/>} />
           <Route path='/708' element={<MyFooter/>} />
           <Route path='/misa' element={<Misa/>}/>
-          <Route path='/m' element={<CreateMealWindow/>}/>
+          <Route path='/create' element={<CreateMealWindow/>}/>
         </Routes>
       </BrowserRouter>
     </div>

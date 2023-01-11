@@ -6,6 +6,8 @@ import { CloudUploadOutlined, UserOutlined } from '@ant-design/icons';
 import '../desing/Meal.css'
 import Porfile from '../components/porfile';
 import { Navigate } from 'react-router-dom';
+import MyFooter from '../components/footer';
+import {Floatbutton} from 'antd'
 
 
 
@@ -106,7 +108,7 @@ const BtnLoginTrue = () => {
           </Row>
     </div>
           <div style={{width:'100vw', height:'25vh', background:'#fff',marginTop:'1%', boxShadow: "0vmax 0vmax 1vh 0.5vw rgba(0, 0, 0, 0.3)",position:'static', bottom:'0 !important'}}>
-DSFHAJD
+<MyFooter />
 </div>
      </div>
       
