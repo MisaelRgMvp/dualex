@@ -1,4 +1,4 @@
-
+/* @import '~antd/dist/antd.css'; */
 @import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 @media (max-width:1079px){
@@ -37,24 +37,10 @@
     box-shadow:  1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.input input{
-    background-color: rgba(0, 0, 0, 0) !important;
-    color: black;
-    font-family:  Lalezar;
-}
 Input::placeholder{
     font-family:  Lalezar;
 }
-.input{
-    background-color: rgba(255, 255, 255, 0.3) !important;
-    border:solid 0.2 black;
-    width: 62vw !important;
-    margin: 1rem;
-    color: black;
-    font-family:  Arial;
-    border-radius: 10px;
-   height: 4vh;
-}
+
 img{
     margin-bottom: 0.5rem;
 

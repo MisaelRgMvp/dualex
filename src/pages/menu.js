@@ -1,5 +1,7 @@
-import React, { NavLink, useState } from 'react'
+import React, { NavLink, useState, useRef } from 'react'
+import { useSelector } from 'react-redux';
 import dos from '../images/baner/2.gif';
+// import useKeepSession from '../context/session';
 import {useAuthContext} from '../context/authContext';
 import uno from '../images/baner/1.jpg';
 import Porfile from '../components/porfile';
@@ -11,12 +13,15 @@ import mvp from '../images/mvp2.png';
 import burger from '../images/burger.jpg'
 import ModalComidaInfo from '../components/modal';
 import '../desing/designIn.css'
+import '../desing/desing.css'
 import { useNavigate } from "react-router-dom";
-import {  HomeFilled, UserOutlined, LockFilled,PoweroffOutlined, ShoppingCartOutlined,CloseCircleFilled } from '@ant-design/icons';
+import {  HomeFilled,DownOutlined, UserOutlined, LockFilled,PoweroffOutlined, ShoppingCartOutlined,CloseCircleFilled } from '@ant-design/icons';
 import DrawerMenu from '../components/menu'
 
 import {
   Button,
+  Tour,
+  Dropdown,
   Carousel,
   Space,
   Typography,
@@ -45,7 +50,52 @@ import Item from 'antd/lib/list/Item';
 import MyFooter from '../components/footer';
 
 const Menu = () => {
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+  const [openR, setOpenR] = useState(false);
+  const steps = [
+    {
+      title: 'Upload File',
+      description: 'Put your files here.',
+      cover: (
+        <img
+          alt="tour.png"
+          src="https://user-images.githubusercontent.com/5378891/197385811-55df8480-7ff4-44bd-9d43-a7dade598d70.png"
+        />
+      ),
+      target: () => ref1.current,
+    },
+    {
+      title: 'Save',
+      description: 'Save your changes.',
+      target: () => ref2.current,
+    },
+    {
+      title: 'Other Actions',
+      description: 'Click to see other actions.',
+      target: () => ref3.current,
+    },
+  ];
+
+  // useKeepSession();
+
+
+    const user = useSelector(state => state);
+  const items = [
+    {
+      label:<CardsComida style={{width:'35px'}}/>,
+      key: '0',
+    },
    
+    {
+      type: 'divider',
+    },
+    {
+      label: <p>IR AL CARRITO</p>,
+      key: '3',
+    },
+  ];
   const BtnLoginTrue = () => {
      
     const routeChange = () =>{ 
@@ -69,9 +119,8 @@ const Menu = () => {
    
     return(
       <>
-  <Porfile style={{width: '90%'}}>
-   </Porfile>
-  </>
+      <Porfile></Porfile>
+        </>
   
     );
   }
@@ -101,6 +150,8 @@ const Menu = () => {
 
   const [isLogged, setIsLogged] = useState(true);
   const [top, setTop] = useState(10);
+  const [productDetails, setProductDetails] = useState([]);
+
   
   const { Search } = Input;
   const suffix = (
@@ -131,6 +182,7 @@ const contentStyleU = {
   backgroundSize: '100% 100%',
   backgroundRepeat: 'no-repeat'
 };  
+const [showInput, setShowInput] = useState(false);
 
 const contentStyleD = {
   height: '45vh',
@@ -207,12 +259,12 @@ const contentStyleT = {
       
          
   return (   
-    <div style = {{ overflowX: 'hidden', overflowY: 'scroll', height:'100vh' }} className="site-drawer-render-in-current-wrapper">
+    <div style = {{ overflowX: 'hidden' }} className="site-drawer-render-in-current-wrapper">
         <center>
-      <Row style={{background:'white',position:'static',left:0,right:0,borderBottom:'solid 0.2px gray', boxShadow: "0vmax 0vmax 1vh 0.31vw rgba(0, 0, 0, 0.1)"}} > 
+      {/* <Row style={{background:'white',position:'static',left:0,right:0,borderBottom:'solid 0.2px gray', boxShadow: "0vmax 0vmax 1vh 0.31vw rgba(0, 0, 0, 0.1)"}} > 
       
       
-        <Col span={2}> 
+        <Col span={4}> 
        
       <Button type="text" className='buttonMenu' onClick={showDrawer} ><MenuOutlined style={{fontSize: '1.8vmax'}} className='iconMenu' /></Button>  
       <Drawer
@@ -226,11 +278,11 @@ const contentStyleT = {
         <DrawerMenu style={{width:'100%', height:'100%'}}/>
       </Drawer>
         </Col>
-        <Col span={18} ><p style={{fontSize:'3vmax', margin:0}}>DUALEX</p></Col>
+        <Col span={16} ><p style={{fontSize:'3vmax', margin:0}}>DUALEX</p></Col>
         
 
 
-        <Col span={2} style={{alignContent:'middle'}}>
+        <Col span={4} style={{alignContent:'middle'}}>
 
 { isLogged
      ?  <BtnLogin/>
@@ -238,23 +290,22 @@ const contentStyleT = {
      :  <BtnLoginTrue />
 }      
     </Col>   
+      
+      </Row > */}
+      <Row>
         <Col span={2}>
-        <Button type="text" className='buttonMenu' onClick={showDrawerS}  >
-       
 
-          <ShoppingCartOutlined style={{fontSize: '1.8vmax'}} className='iconMenu' />
-        </Button>  
-     </Col>   
-      </Row >
-      <Affix offsetTop={0} style={{position: 'sticky',top:'0%',zIndex:22, padding:13, background:'white', boxShadow: "0px 5px 5px rgba(0,0,0,0.3)"}}> 
-      <div  > 
-      <Input placeholder="Buscar comida" className='inputSearch' onPressEnter={()=>onSearch()} suffix={<Button type="text" icon={<SearchOutlined />} style={{background:'none'}} shape="circle"></Button>}/>  
-</div>      
-      </Affix>
+        </Col>
+      </Row>
      
     
-< Row />
-<div style={{ margin:'1%', background: '#fff', padding: '2%',  boxShadow: "0vmax 0vmax 1vh 0.5vw rgba(0, 0, 0, 0.3)" }}>
+      {/* <Affix offsetTop={0} style={{position: 'sticky',top:'0%',zIndex:22, padding:13,left:0,right:0, background:'white', boxShadow: "0px 5px 5px rgba(0,0,0,0.3)"}}> 
+      <div  > 
+      <Input placeholder="Buscar comida"  onPressEnter={()=>onSearch()} suffix={<Button type="text" icon={<SearchOutlined />}  shape="circle"></Button>}/>  
+</div>      
+      </Affix> */}
+
+<div   style={{ margin:'1%', background: '#fff', padding: '2%',  boxShadow: "0vmax 0vmax 1vh 0.5vw rgba(0, 0, 0, 0.3)" }}>
   <div  style={{marginBottom:'2vh'}}>
 <Carousel autoplay dots={false} autoplaySpeed={5000} >
 
@@ -294,66 +345,37 @@ const contentStyleT = {
     
 
 
-    <Col  span={
-          8}
-          xs={24} sm={20}  md={12} lg={8} xl={8}> 
-   <CardsComida  />
-      </Col>  
-      <Col  span={
-          8}
-          xs={24} sm={20}  md={12} lg={8} xl={8}> 
-   <CardsComida setModal2Open={setModal2Open} />
-      </Col>  
-      <Col  span={
-          8}
-          xs={24} sm={20}  md={12} lg={8} xl={8}> 
-   <CardsComida setModal2Open={setModal2Open} />
-      </Col>  
-      <Col  span={
-          8}
-          xs={24} sm={20}  md={12} lg={8} xl={8}> 
-   <CardsComida setModal2Open={setModal2Open} />
-      </Col>  
-      <Col  span={
-          8}
-          xs={24} sm={20}  md={12} lg={8} xl={8}> 
-   <CardsComida setModal2Open={setModal2Open} />
-      </Col>  
-      <Col  span={
-          8}
-          xs={24} sm={20}  md={12} lg={8} xl={8}> 
-   <CardsComida setModal2Open={setModal2Open} />
-      </Col>  
-      <Col  span={
-          8}
-          xs={24} sm={20}  md={12} lg={8} xl={8}> 
-   <CardsComida  />
-      </Col>  
-      <Col  span={
-          8}
-          xs={24} sm={20}  md={12} lg={8} xl={8}> 
-   <CardsComida setModal2Open={setModal2Open} />
-      </Col>  
-      <Col  span={
-          8}
-          xs={24} sm={20}  md={12} lg={8} xl={8}> 
-   <CardsComida setModal2Open={setModal2Open} />
-      </Col>  
+
+   <CardsComida ref={ref2}  setModal2Open={setModal2Open} setProducts={setProductDetails} />
+ 
+     
+   <Tour open={openR} onClose={() => setOpenR(false)} steps={steps} />
+
       
 </Row>
+
+
 </div>
 </center>
 
-<div style={{width:'100vw', height:'25vh', background:'#fff',marginTop:'1%', boxShadow: "0vmax 0vmax 1vh 0.5vw rgba(0, 0, 0, 0.3)", position:'relative', bottom:'0 !important' }}>
+{/* <div style={{width:'100vw', height:'25vh', background:'#fff',marginTop:'1%', boxShadow: "0vmax 0vmax 1vh 0.5vw rgba(0, 0, 0, 0.3)", position:'relative', bottom:'0 !important' }}>
   <MyFooter />
-</div>
-<div>holas</div>
+ 
+    <a onClick={() => setOpenR(true)}>
+      <Space>
+       APRENDE COMO USAR
+        <DownOutlined />
+      </Space>
+    </a>
+
+</div> */}
+<div>  </div>
   
 <Modal
-         title="Nombre Comida"
+         
          centered
          
-       
+        onCancel={() => setModal2Open(false)}
          open={modal2Open}
          
          footer={[
@@ -372,7 +394,7 @@ const contentStyleT = {
         ]}
          className='modal'
        >
-        <ModalComidaInfo />
+        <ModalComidaInfo product={productDetails} />
        </Modal>
 
       </div>     

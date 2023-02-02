@@ -1,4 +1,4 @@
-
+/* @import '~antd/dist/antd.css'; */
 Input::placeholder{
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -7,11 +7,11 @@ Search{
 }
 body{
     color: white;
-   
+    overflow-y:scroll !important ;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: #e9e9e9 !important;
    
     
@@ -59,14 +59,17 @@ body{
     padding-right: 5px;
 }
 .card{
-    background-color: rgba(0, 0, 0, 0);
+    background-color: none;
     border:none;
     padding: 0;
+    box-shadow: none !important;
 }
 .imageCard{
+    box-shadow: none !important;
     border-radius: 15px 15px  4px   4px !important;
+    border: none;
 }
-.inputAntR input {
+.inputAntR {
     background-color: rgba(4, 4, 4, 0) !important;
     border-radius: 4px;
     color: white;
@@ -123,6 +126,7 @@ text-align: center;
  }
 .card:hover{
     cursor: pointer;
+    border: none;
     animation-duration: 0.7s;
     animation-name: slidein;
     -webkit-transform:scale(1.06);
@@ -131,6 +135,7 @@ text-align: center;
     -o-transform:scale(1.06);
     transform:scale(1.06);
 }
+
 @keyframes slideon {
     0%{
     -webkit-transform:scale(1.06);
@@ -165,3 +170,17 @@ text-align: center;
     transform:scale(1.0);
 }
 }
+@keyframes slideInLeft {
+    0% {
+      width: 10px;;
+    }
+    30% {
+        width: 150px
+    }
+    70% {
+        width: 360px;
+    }
+    100% {
+      width: 350px;
+    }
+  }

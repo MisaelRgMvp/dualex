@@ -1,8 +1,10 @@
 import React, {useState, useEffect  } from 'react'
 import '../desing/designF.css'
-import { useNavigate, Link } from "react-router-dom";
+import axios from 'axios';
+import { baseRecuperate } from '../base/baseUrls';
+import { useNavigate, Link, Navigate } from "react-router-dom";
 import {HomeFilled, UserOutlined, InfoCircleOutlined} from '@ant-design/icons';
-import { Button, Input, Row, Col, Form, Spin, Avatar, Tooltip } from 'antd'
+import { Button,message, Input, Row, Col, Form, Spin, Avatar, Tooltip } from 'antd'
 import open from '../images/closeMail.png'
 const formItemLayout = { 
   labelCol: {
@@ -25,6 +27,29 @@ sm: {
 },
 };
 export default function ForgotP() {
+const [magicWord, setMagicWord] = useState('');
+  let forgot= new URLSearchParams({email: magicWord})
+  function handleInputChangeUser(event) {
+    setMagicWord(event.target.value);
+  }
+ function handleSubmit(event) {
+    event.preventDefault();
+    setLoadings(true);
+    axios.post(baseRecuperate, forgot)
+    .then(response => {
+      setLoadings(false);
+      console.log(response)
+      navigate('/forgot/code');
+    })
+    .catch(error => {
+      setLoadings(false);
+     
+      if(error.response.status === 404){
+        message.warning('USUARIO NO ENCONTRADO')
+      }
+    });
+    
+  }
   let navigate = useNavigate(); 
   const routeChange = () =>{ 
     let path = `/login`; 
@@ -38,13 +63,8 @@ useEffect(() => {
     
    }, 3000);
   }, []);
-  const [loadings, setLoadings] = useState([]);
+  const [loadings, setLoadings] = useState(false);
   const enterLoading = (index) => {
-    setLoadings((prevLoadings) => {
-      const newLoadings = [...prevLoadings];
-      newLoadings[index] = true;
-      return newLoadings;
-    });
   }
   return (
     <div>
@@ -64,11 +84,12 @@ useEffect(() => {
       
         
         <Col 
-        className='containerPrincipalf'
+        // className='containerPrincipalf'
         span={12} 
+        xl={12} xxl={12} md={24} sm={24}
         ><Spin tip="Cargando..." spinning={isLoading}>
          <div className='forgotP' >
-         <img  className='In' preview={false} src={open} style={{  marginTop: '14vh', marginBottom: '3vh'}} ></img>
+         <img  className='In' preview={false} src={open} style={{  marginTop: '14vh', marginBottom: '3vh' }} ></img>
          </div>
           <Form
       
@@ -77,10 +98,10 @@ useEffect(() => {
 
 
                 <Input
-                xs={20} sm={20}  md={12} lg={8} xl={8}
+                xs={12}
                 className='input' 
                 placeholder='Ingrese su correo'
-                autoSize='true'
+                onChange={handleInputChangeUser}
                 prefix={<Avatar size={ { xs: 4, sm: 8, md: 12, lg: 16, xl: 20, xxl: 24 }} style={{fontSize:'0.7vmax'}} icon={<UserOutlined  />} />} 
                 suffix={
                   <Tooltip title="CORREO PREVIAMENTE REGISTRADO">
@@ -91,9 +112,10 @@ useEffect(() => {
 
                 <br />
                 <Button 
+
                 xs={8} sm={10}  md={12} lg={28} xl={38}
-                  loading={loadings[2]}
-                  onClick={() => enterLoading(2)}
+                  loading={loadings}
+                 onClick={(event) => handleSubmit(event)}
                   type="primary"
                   color='blue'
                  className='ButtonF'
