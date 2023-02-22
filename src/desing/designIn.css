@@ -34,9 +34,7 @@ p {
   }
   .site-drawer-render-in-current-wrapper {
     position: sticky !important;
-    height: 100vh;
     background-color: white I !important;
-    overflow: scroll;
     right: 0 !important;
     left: 0 !important;
     text-align: center;
@@ -188,7 +186,7 @@ p {
   .icon {
     color: gray;
   }
-  Input::placeholder {
+  /* Input::placeholder {
     background-color: white;
   }
   Input {
@@ -198,7 +196,7 @@ p {
     width: 35vw;
     background-color: rgb(255, 255, 255);
     margin: 10px;
-  }
+  } */
 
   Search {
     background-color: white;
@@ -263,7 +261,7 @@ Search::placeholder{
   }
   .site-drawer-render-in-current-wrapper {
     position: sticky !important;
-    overflow-y: scroll;
+   
     overflow-x: hidden !important;
     right: 0 !important;
     text-align: center;
@@ -322,7 +320,6 @@ Search::placeholder{
     border-radius: 20px !important;
   }
   .inputSearch {
-    background-color: rgb(255, 255, 255) !important;
     border:solid 0.2 black;
    height: 6vh;
     width: 55vw;
@@ -477,7 +474,7 @@ img{
   .searchBar::placeholder {
     background-color: rgb(255, 255, 255);
   }
-  Search {
+  .inputSearch {
     width: 35vw;
     background-color: white;
   }
